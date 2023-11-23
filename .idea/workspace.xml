@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab81f890-91a0-4bb7-846c-1aa100763aee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -9,9 +12,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="xceduProject" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2YZbnuMXm7Dy7REKDsIXIwgv4IX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -25,8 +46,86 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GitRepository/XCeduProject" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xcedubase" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.1507799" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xceduProject\xcedubase" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FirstTest.FirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xcedubase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hao.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hao.test" />
+      <option name="MAIN_CLASS_NAME" value="com.hao.test.FirstTest" />
+      <option name="METHOD_NAME" value="FirstTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="xceduparent" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="xceduparent" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FirstTest.FirstTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -51,7 +150,9 @@
       <option name="presentableId" value="Default" />
       <updated>1700736218291</updated>
       <workItem from="1700736219820" duration="3140000" />
-      <workItem from="1700739399873" duration="909000" />
+      <workItem from="1700739399873" duration="2576000" />
+      <workItem from="1700742023165" duration="69000" />
+      <workItem from="1700742579835" duration="2193000" />
     </task>
     <task id="LOCAL-00001" summary="项目第一次提交">
       <created>1700738086042</created>
@@ -67,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700739549805</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="项目第一次提交">
+      <created>1700740328936</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700740328936</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,45 +190,49 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1495" y="276" key="#Notifications/0.0.2560.1400@0.0.2560.1400" timestamp="1700739371615" />
-    <state x="1530" y="116" key="CommitChangelistDialog2" timestamp="1700739549472">
+    <state x="1495" y="276" key="#Project_Structure" timestamp="1700741958656">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1530" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1700739549472" />
+    <state x="1495" y="276" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1700741958656" />
+    <state x="1530" y="116" key="CommitChangelistDialog2" timestamp="1700740328610">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1530" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1700740328610" />
     <state x="496" y="127" key="DiffContextDialog" timestamp="1700739547448">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="496" y="127" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700739547448" />
-    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1700740261943">
+    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1700744016478">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1700740261943" />
+    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1700744016478" />
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog" timestamp="1700738755899">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700738755899" />
-    <state x="1330" y="258" key="SettingsEditor" timestamp="1700740235346">
+    <state x="1264" y="258" key="SettingsEditor" timestamp="1700744791829">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1330" y="258" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1700740235346" />
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1700739421140">
+    <state x="1264" y="258" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1700744791829" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1700743710484">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700739421140" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700743710484" />
     <state x="1539" y="100" width="929" height="1200" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1700737684274">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1539" y="100" width="929" height="1200" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700737684274" />
-    <state x="1764" y="598" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1700736940601">
+    <state x="1764" y="598" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1700744549268">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1764" y="598" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700736940601" />
+    <state x="1764" y="598" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700744549268" />
     <state x="1612" y="429" key="git4idea.merge.GitPullDialog" timestamp="1700739004303">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1612" y="429" key="git4idea.merge.GitPullDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700739004303" />
-    <state x="1603" y="217" key="new project wizard" timestamp="1700737744595">
+    <state x="1367" y="233" width="1091" height="966" key="new project wizard" timestamp="1700743922509">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1603" y="217" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1700737744595" />
+    <state x="1367" y="233" width="1091" height="966" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1700743922509" />
   </component>
 </project>

@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/xceduProject.iml" filepath="$PROJECT_DIR$/xceduProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedubase/xcedubase.iml" filepath="$PROJECT_DIR$/xcedubase/xcedubase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xceduparent/xceduparent.iml" filepath="$PROJECT_DIR$/xceduparent/xceduparent.iml" />
     </modules>
   </component>
 </project>
