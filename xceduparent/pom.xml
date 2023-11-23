@@ -36,7 +36,6 @@
 
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -58,13 +57,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- lombok，简化类的构建-->
+            <!--  lombok，简化类的构建 -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${org.projectlombok.version}</version>
             </dependency>
-            <!-- mapstruct 代码生成器，简化java bean之间的映射 -->
+            <!--  mapstruct 代码生成器，简化java bean之间的映射  -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-jdk8</artifactId>
@@ -80,71 +79,68 @@
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger-annotations.version}</version>
             </dependency>
-            <!-- Servlet 容器管理 -->
+            <!--  Servlet 容器管理  -->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${javax.servlet-api.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- fastjson ，json解析工具 -->
+            <!--  fastjson ，json解析工具  -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
-            <!-- druid 连接池管理 -->
+            <!--  druid 连接池管理  -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid-spring-boot-starter.version}</version>
             </dependency>
-
-            <!-- mySQL数据库驱动包管理 -->
+            <!--  mySQL数据库驱动包管理  -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-connector-java.version}</version>
             </dependency>
-            <!-- mybatis plus 集成Spring Boot启动器 -->
+            <!--  mybatis plus 集成Spring Boot启动器  -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus-boot-starter.version}</version>
             </dependency>
-
-            <!-- mybatis plus 代码生成器 -->
+            <!--  mybatis plus 代码生成器  -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
                 <version>${mybatis-plus-boot-starter.version}</version>
             </dependency>
-
-            <!-- 工具类管理 -->
+            <!--  工具类管理  -->
             <dependency>
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
                 <version>${commons-lang.version}</version>
             </dependency>
-            <!-- 分布式文件系统 minIO的客户端API包 -->
+            <!--  分布式文件系统 minIO的客户端API包  -->
             <dependency>
                 <groupId>io.minio</groupId>
                 <artifactId>minio</artifactId>
                 <version>${minio.version}</version>
             </dependency>
-            <!--google推荐的一套工具类库-->
+            <!-- google推荐的一套工具类库 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>25.0-jre</version>
             </dependency>
-            <!--分布式任务调度-->
+            <!-- 分布式任务调度 -->
             <dependency>
                 <groupId>com.xuxueli</groupId>
                 <artifactId>xxl-job-core</artifactId>
                 <version>${xxl-job-core.version}</version>
             </dependency>
-            <!--Spring boot单元测试-->
+            <!-- Spring boot单元测试 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
@@ -177,19 +173,16 @@
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.elasticsearch</groupId>
                 <artifactId>elasticsearch</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
         </dependencies>
-
     </dependencyManagement>
-
     <build>
         <finalName>${project.name}</finalName>
-        <!--编译打包过虑配置-->
+        <!-- 编译打包过虑配置 -->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -211,11 +204,11 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <!--指定项目源码jdk的版本-->
+                    <!-- 指定项目源码jdk的版本 -->
                     <source>1.8</source>
-                    <!--指定项目编译后的jdk的版本-->
+                    <!-- 指定项目编译后的jdk的版本 -->
                     <target>1.8</target>
-                    <!--配置注解预编译-->
+                    <!-- 配置注解预编译 -->
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
@@ -225,19 +218,17 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-
-            <!--责处理项目资源文件并拷贝到输出目录，如果有额外的资源文件目录则需要配置-->
+            <!-- 责处理项目资源文件并拷贝到输出目录，如果有额外的资源文件目录则需要配置 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
                     <encoding>utf-8</encoding>
-                    <!--使用默认分隔符，resource中可以使用分割符定义过虑的路径-->
+                    <!-- 使用默认分隔符，resource中可以使用分割符定义过虑的路径 -->
                     <useDefaultDelimiters>true</useDefaultDelimiters>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

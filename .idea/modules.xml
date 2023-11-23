@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/xcedu-content/xcedu-content.iml" filepath="$PROJECT_DIR$/xcedu-content/xcedu-content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedu-content/xcedu-content-api/xcedu-content-api.iml" filepath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/xcedu-content-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedu-content/xcedu-content-model/xcedu-content-model.iml" filepath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/xcedu-content-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedu-content/xcedu-content-service/xcedu-content-service.iml" filepath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/xcedu-content-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/xceduProject.iml" filepath="$PROJECT_DIR$/xceduProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedubase/xcedubase.iml" filepath="$PROJECT_DIR$/xcedubase/xcedubase.iml" />
       <module fileurl="file://$PROJECT_DIR$/xceduparent/xceduparent.iml" filepath="$PROJECT_DIR$/xceduparent/xceduparent.iml" />
