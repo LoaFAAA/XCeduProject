@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab81f890-91a0-4bb7-846c-1aa100763aee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedubase/src/test/java/com/hao/test/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedubase/src/test/java/com/hao/test/FirstTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
@@ -124,6 +128,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.FirstTest.FirstTest" />
+        <item itemvalue="JUnit.FirstTest.FirstTest" />
+        <item itemvalue="JUnit.FirstTest.FirstTest" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +158,7 @@
       <workItem from="1700736219820" duration="3140000" />
       <workItem from="1700739399873" duration="2576000" />
       <workItem from="1700742023165" duration="69000" />
-      <workItem from="1700742579835" duration="2193000" />
+      <workItem from="1700742579835" duration="4788000" />
     </task>
     <task id="LOCAL-00001" summary="项目第一次提交">
       <created>1700738086042</created>
@@ -175,13 +181,34 @@
       <option name="project" value="LOCAL" />
       <updated>1700740328936</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="项目第一次提交">
+      <created>1700744870295</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700744870295</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../GitRepository/XCeduProject" />
+    </ignored-roots>
     <MESSAGE value="项目第一次提交" />
     <option name="LAST_COMMIT_MESSAGE" value="项目第一次提交" />
   </component>
@@ -194,10 +221,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1495" y="276" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1700741958656" />
-    <state x="1530" y="116" key="CommitChangelistDialog2" timestamp="1700740328610">
+    <state x="1530" y="116" key="CommitChangelistDialog2" timestamp="1700744869629">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1530" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1700740328610" />
+    <state x="1530" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1700744869629" />
     <state x="496" y="127" key="DiffContextDialog" timestamp="1700739547448">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -210,14 +237,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700738755899" />
-    <state x="1264" y="258" key="SettingsEditor" timestamp="1700744791829">
+    <state width="1059" height="360" key="GridCell.Tab.0.bottom" timestamp="1700744872120">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1264" y="258" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1700744791829" />
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1700743710484">
+    <state width="1059" height="360" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700744872120" />
+    <state width="1059" height="360" key="GridCell.Tab.0.center" timestamp="1700744872120">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700743710484" />
+    <state width="1059" height="360" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700744872120" />
+    <state width="1059" height="360" key="GridCell.Tab.0.left" timestamp="1700744872120">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1059" height="360" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700744872120" />
+    <state width="1059" height="360" key="GridCell.Tab.0.right" timestamp="1700744872120">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1059" height="360" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700744872120" />
+    <state x="1264" y="258" key="SettingsEditor" timestamp="1700746679832">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1264" y="258" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1700746679832" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1700746796959">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700746796959" />
     <state x="1539" y="100" width="929" height="1200" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1700737684274">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
