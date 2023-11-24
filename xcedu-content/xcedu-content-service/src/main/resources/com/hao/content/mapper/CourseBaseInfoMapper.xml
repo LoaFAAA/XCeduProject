@@ -3,20 +3,20 @@
 <mapper namespace="com.hao.content.mapper.CourseBaseInfoMapper">
 
 
-    <select id="selectById" resultType="com.hao.centent.model.po.CourseBase">
+    <select id="selectById" resultType="com.hao.content.model.po.CourseBase">
         select * from course_base where id = #{id}
     </select>
 
-    <select id="selectPage" resultType="com.hao.centent.model.po.CourseBase">
+    <select id="selectPage" resultType="com.hao.content.model.po.CourseBase">
      select * from course_base
      <where>
-         <if test="auditStatus != null and auditStatus != ' '">
+         <if test="auditStatus != null and auditStatus != ''">
              and audit_status = #{auditStatus}
          </if>
-         <if test="courseName != null and courseName != ' '">
+         <if test="courseName != null and courseName != ''">
              and name = #{courseName}
          </if>
-         <if test="publicStatus != null and publicStatus != ' '">
+         <if test="publicStatus != null and courseName != ''">
              and status = #{publicStatus}
          </if>
      </where>

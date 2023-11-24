@@ -5,8 +5,8 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.hao.base.model.PageParams;
 import com.hao.base.model.PageResult;
-import com.hao.centent.model.dto.QueryCourseParamsDTO;
-import com.hao.centent.model.po.CourseBase;
+import com.hao.content.model.dto.QueryCourseParamsDTO;
+import com.hao.content.model.po.CourseBase;
 import com.hao.content.mapper.CourseBaseInfoMapper;
 import com.hao.content.service.CourseBaseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,14 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         PageHelper.startPage(pageParams.getPageNo().intValue(),pageParams.getPageSize().intValue());
         Page<CourseBase> page = courseBaseInfoMapper.selectPage(queryCourseParamsDTO);
 
-        PageResult<CourseBase> pageResult = new PageResult(page.getResult(),page.getTotal(),pageParams.getPageNo(),pageParams.getPageSize());
+        PageResult<CourseBase> pageResult = new PageResult();
+        List<CourseBase> courseBaseList = page.getResult();
+        pageResult.setItems(courseBaseList);
+        Long count = Long.valueOf(courseBaseList.size());
+        pageResult.setCounts(count);
+        pageResult.setPage(pageParams.getPageNo());
+        pageResult.setPageSize(pageParams.getPageSize());
+
         return pageResult;
     }
 }

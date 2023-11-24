@@ -11,10 +11,7 @@ import java.util.List;
  * @author hao
  */
 @Data
-@Builder
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
 public class PageResult<T> implements Serializable {
     //查询结果
     private List<T> items;
@@ -27,4 +24,15 @@ public class PageResult<T> implements Serializable {
 
     //每页记录数
     private Long pageSize;
+
+    public PageResult(){
+
+    }
+
+    public PageResult(List<T> items, long counts, long page, long pageSize) {
+        this.items = items;
+        this.counts = counts;
+        this.page = page;
+        this.pageSize = pageSize;
+    }
 }

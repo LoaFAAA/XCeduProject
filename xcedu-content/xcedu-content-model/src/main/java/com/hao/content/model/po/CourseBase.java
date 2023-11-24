@@ -1,4 +1,4 @@
-package com.hao.centent.model.po;
+package com.hao.content.model.po;
 
 
 import lombok.*;

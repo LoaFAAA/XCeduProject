@@ -1,4 +1,4 @@
-package com.hao.centent.model.dto;
+package com.hao.content.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

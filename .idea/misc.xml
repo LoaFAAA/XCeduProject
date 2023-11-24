@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/xcedu-content-model/pom.xml" />
         <option value="$PROJECT_DIR$/xcedu-content/pom.xml" />
         <option value="$PROJECT_DIR$/xcedu-content-service/pom.xml" />
+        <option value="$PROJECT_DIR$/xcedusystem/pom.xml" />
       </list>
     </option>
   </component>

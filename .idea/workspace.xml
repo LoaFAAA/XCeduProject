@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab81f890-91a0-4bb7-846c-1aa100763aee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/ContentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/ContentApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CourseBaseInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CourseBaseInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/centent/model/po/CourseBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/centent/model/po/CourseBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/centent/model/dto/QueryCourseParamsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto/QueryCourseParamsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/centent/model/po/CourseBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/po/CourseBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/model/PageParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/model/PageParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/CourseBaseInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/CourseBaseInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/CourseBaseInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/CourseBaseInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/com/hao/content/mapper/CourseBaseInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/com/hao/content/mapper/CourseBaseInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/test/java/com/hao/content/CourseBaseInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/test/java/com/hao/content/CourseBaseInfoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/model/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/model/PageResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +65,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -79,6 +86,10 @@
         <option name="userSettingsFile" value="D:\Maven\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+    <option name="jreName" value="1.8 (2)" />
   </component>
   <component name="ProjectId" id="2YZbnuMXm7Dy7REKDsIXIwgv4IX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -101,23 +112,9 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.1507799" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.hao" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources" />
-      <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\test\resources" />
-      <recent name="E:\xceduProject\xcedu-content\xcedu-content-api\src\main\resources" />
-      <recent name="E:\xceduProject\xcedu-content" />
-      <recent name="E:\xceduProject\xcedu-content\xcedu-content-api" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.hao.content" />
-      <recent name="com.hao.centent.model.po" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources\com\hao\content\mapper" />
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources\mapper" />
@@ -125,8 +122,29 @@
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources" />
       <recent name="E:\xceduProject\xcedu-content" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.hao" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hao.centent.model.po" />
+      <recent name="com.hao.content" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ComXCeduProject\xceduProject\xcedusystem\xcedu-system-api\src\main\java\com\hao\system" />
+      <recent name="E:\ComXCeduProject\xceduProject\xcedusystem" />
+      <recent name="E:\ComXCeduProject\xceduProject" />
+      <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources" />
+      <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\test\resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.CourseBaseInfoTest.TestCourseBaseMapper (1)">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ContentApplication">
     <configuration name="CourseBaseInfoTest.TestCourseBaseMapper (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xcedu-content-service" />
       <extension name="coverage">
@@ -189,19 +207,6 @@
       <module name="xcedu-content-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hao.content.api.com.hao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hao.content.api.com.hao.ContentApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="xcedu-content-api" />
-      <extension name="coverage">
-        <pattern>
           <option name="PATTERN" value="com.hao.content.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
@@ -211,13 +216,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="xcedu-system-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hao.system.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hao.system.SystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ContentApplication" />
+        <item itemvalue="Spring Boot.SystemApplication" />
         <item itemvalue="JUnit.CourseBaseInfoTest.TestCourseBaseMapper (1)" />
         <item itemvalue="Spring Boot.ContentApplication (2)" />
         <item itemvalue="JUnit.CourseBaseInfoTest.TestCourseBaseMapper" />
-        <item itemvalue="Spring Boot.ContentApplication (1)" />
-        <item itemvalue="Spring Boot.ContentApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -225,8 +243,24 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.1932842" />
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -253,6 +287,11 @@
       <workItem from="1700818618882" duration="1464000" />
       <workItem from="1700820094853" duration="6461000" />
       <workItem from="1700826575107" duration="3253000" />
+      <workItem from="1700830302255" duration="2426000" />
+      <workItem from="1700833477712" duration="1867000" />
+      <workItem from="1700835356034" duration="1709000" />
+      <workItem from="1700837083399" duration="8961000" />
+      <workItem from="1700850419901" duration="1598000" />
     </task>
     <task id="LOCAL-00001" summary="项目第一次提交">
       <created>1700738086042</created>
@@ -289,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700775716168</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="课程管理分页查询">
+      <created>1700830428655</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700830428655</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +344,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="项目第一次提交" />
     <MESSAGE value="spring cloud 模块划分" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring cloud 模块划分" />
+    <MESSAGE value="课程管理分页查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程管理分页查询" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1495" y="276" key="#Notifications" timestamp="1700763057854">
@@ -309,10 +356,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1495" y="276" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1700741958656" />
-    <state x="1496" y="351" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1700820508870">
+    <state x="1094" y="271" width="1111" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1700835252386">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1496" y="351" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700820508870" />
+    <state x="1094" y="271" width="1111" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700835252386" />
     <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser" timestamp="1700824401429">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -321,82 +368,86 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1565" y="518" width="678" height="369" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400@0.0.2560.1400" timestamp="1700821094986" />
-    <state x="1509" y="116" key="CommitChangelistDialog2" timestamp="1700775715485">
+    <state x="1377" y="116" key="CommitChangelistDialog2" timestamp="1700830427434">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1509" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1700775715485" />
+    <state x="1377" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1700830427434" />
     <state x="496" y="127" key="DiffContextDialog" timestamp="1700748994957">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="496" y="127" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700748994957" />
-    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1700821809162">
+    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1700839982488">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1700821809162" />
+    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1700839982488" />
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog" timestamp="1700738755899">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700738755899" />
-    <state width="1258" height="448" key="GridCell.Tab.0.bottom" timestamp="1700829872749">
+    <state width="984" height="360" key="GridCell.Tab.0.bottom" timestamp="1700852228577">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700829872749" />
-    <state width="1258" height="448" key="GridCell.Tab.0.center" timestamp="1700829872749">
+    <state width="984" height="360" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
+    <state width="984" height="360" key="GridCell.Tab.0.center" timestamp="1700852228577">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700829872749" />
-    <state width="1258" height="448" key="GridCell.Tab.0.left" timestamp="1700829872749">
+    <state width="984" height="360" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
+    <state width="984" height="360" key="GridCell.Tab.0.left" timestamp="1700852228576">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700829872749" />
-    <state width="1258" height="448" key="GridCell.Tab.0.right" timestamp="1700829872749">
+    <state width="984" height="360" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228576" />
+    <state width="984" height="360" key="GridCell.Tab.0.right" timestamp="1700852228577">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700829872749" />
-    <state width="1258" height="448" key="GridCell.Tab.1.bottom" timestamp="1700829889496">
+    <state width="984" height="360" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
+    <state width="984" height="360" key="GridCell.Tab.1.bottom" timestamp="1700852228578">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700829889496" />
-    <state width="1258" height="448" key="GridCell.Tab.1.center" timestamp="1700829889495">
+    <state width="984" height="360" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228578" />
+    <state width="984" height="360" key="GridCell.Tab.1.center" timestamp="1700852228577">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700829889495" />
-    <state width="1258" height="448" key="GridCell.Tab.1.left" timestamp="1700829889495">
+    <state width="984" height="360" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
+    <state width="984" height="360" key="GridCell.Tab.1.left" timestamp="1700852228577">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700829889495" />
-    <state width="1258" height="448" key="GridCell.Tab.1.right" timestamp="1700829889496">
+    <state width="984" height="360" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
+    <state width="984" height="360" key="GridCell.Tab.1.right" timestamp="1700852228578">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700829889496" />
-    <state width="1258" height="448" key="GridCell.Tab.2.bottom" timestamp="1700829872749">
+    <state width="984" height="360" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228578" />
+    <state width="984" height="360" key="GridCell.Tab.2.bottom" timestamp="1700842919265">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700829872749" />
-    <state width="1258" height="448" key="GridCell.Tab.2.center" timestamp="1700829872749">
+    <state width="984" height="360" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700842919265" />
+    <state width="984" height="360" key="GridCell.Tab.2.center" timestamp="1700842919264">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700829872749" />
-    <state width="1258" height="448" key="GridCell.Tab.2.left" timestamp="1700829872749">
+    <state width="984" height="360" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700842919264" />
+    <state width="984" height="360" key="GridCell.Tab.2.left" timestamp="1700842919264">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700829872749" />
-    <state width="1258" height="448" key="GridCell.Tab.2.right" timestamp="1700829872749">
+    <state width="984" height="360" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700842919264" />
+    <state width="984" height="360" key="GridCell.Tab.2.right" timestamp="1700842919265">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="448" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700829872749" />
-    <state x="1321" y="273" key="Maven.ArtifactSearchDialog" timestamp="1700822846440">
+    <state width="984" height="360" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700842919265" />
+    <state x="1321" y="273" key="Maven.ArtifactSearchDialog" timestamp="1700838282450">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1321" y="273" key="Maven.ArtifactSearchDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700822846440" />
-    <state x="810" y="207" key="SettingsEditor" timestamp="1700827339283">
+    <state x="1321" y="273" key="Maven.ArtifactSearchDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700838282450" />
+    <state x="1027" y="269" width="1422" height="933" key="NewModule_or_Project.wizard" timestamp="1700832569479">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="810" y="207" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1700827339283" />
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1700775725832">
+    <state x="1027" y="269" width="1422" height="933" key="NewModule_or_Project.wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1700832569479" />
+    <state x="810" y="207" key="SettingsEditor" timestamp="1700837277395">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700775725832" />
+    <state x="810" y="207" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1700837277395" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1700830441771">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700830441771" />
     <state x="1539" y="100" width="929" height="1200" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1700737684274">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -405,27 +456,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1764" y="598" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700744549268" />
+    <state x="1342" y="273" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1700841729619">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1342" y="273" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1400@0.0.2560.1400" timestamp="1700841729619" />
     <state x="1612" y="429" key="git4idea.merge.GitPullDialog" timestamp="1700739004303">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1612" y="429" key="git4idea.merge.GitPullDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700739004303" />
-    <state x="1367" y="233" width="1091" height="966" key="new project wizard" timestamp="1700819077171">
+    <state x="1367" y="233" width="1091" height="966" key="new project wizard" timestamp="1700832673964">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1367" y="233" width="1091" height="966" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1700819077171" />
+    <state x="1367" y="233" width="1091" height="966" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1700832673964" />
+    <state x="1476" y="329" width="840" height="1034" key="run.anything.popup" timestamp="1700834248775">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1476" y="329" width="840" height="1034" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1700834248775" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CourseBaseInfoController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="5" />
+          <line>25</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
