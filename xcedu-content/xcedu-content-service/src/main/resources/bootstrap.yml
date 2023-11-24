@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: content-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.101.65:3306/xcplus_content?serverTimezone=UTC&userUnicode=true&useSSL=false&
+    username: root
+    password: mysql
+
+logging:
+  config: classpath:log4j2-dev.xml  # 日志文件配置路径
+
+#mybatis-plus:
+#  mapper-locations=classpath:com/hao/resources/mapper/*
+mybatis-plus:
+  mapper-locations: classpath:resources/com/hao/content/mapper/*
+  configuration:
+    auto-mapping-behavior: partial
+    map-underscore-to-camel-case: true
+
+swagger:
+  title: "学成在线内容管理系统"
+  description: "内容系统管理系统对课程相关信息进行管理"
+  base-package: com.hao.content
+  enabled: true
+  version: 1.0.0

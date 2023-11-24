@@ -1,7 +1,7 @@
 package com.hao.centent.model.po;
 
 
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -12,6 +12,10 @@ import java.time.LocalDateTime;
  * @author hao
  */
 @Data
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class CourseBase implements Serializable {
 
     private static final long serialVersionUID = 1L;
