@@ -1,5 +1,6 @@
 package com.hao.content.model.po;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Builder;
 import lombok.Data;
 
@@ -11,6 +12,7 @@ import java.io.Serializable;
  * @author hao
  */
 @Data
+@TableName("course_category")
 public class CourseCategory implements Serializable {
 
     private static final long serialVersionUID = 1L;

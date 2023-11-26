@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab81f890-91a0-4bb7-846c-1aa100763aee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CourseBaseInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CourseBaseInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/centent/model/dto/QueryCourseParamsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto/QueryCourseParamsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/centent/model/po/CourseBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/po/CourseBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CourseCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CourseCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto/CourseCategoryTreeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto/CourseCategoryTreeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/po/CourseCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/po/CourseCategory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/CourseBaseInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/CourseBaseInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/CourseCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/CourseCategoryMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/CourseBaseInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/CourseBaseInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/com/hao/content/mapper/CourseBaseInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/com/hao/content/mapper/CourseBaseInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/test/java/com/hao/content/CourseBaseInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/test/java/com/hao/content/CourseBaseInfoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/model/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/model/PageResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedusystem/xcedu-system-service/src/main/java/com/hao/system/mapper/DictionaryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedusystem/xcedu-system-service/src/main/resources/com/hao/system/mapper/DictionaryMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,7 @@
         <item name="xcplus_content@192.168.101.65" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="xcplus_content: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="course_base: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="course_category: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -65,8 +63,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -108,33 +106,37 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.1507799" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ComXCeduProject\xceduProject\xcedusystem\xcedu-system-service\src\main\resources\com\hao\system\mapper" />
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources\com\hao\content\mapper" />
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources\mapper" />
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\java\com\hao\content\mapper" />
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources" />
-      <recent name="E:\xceduProject\xcedu-content" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.hao.content" />
       <recent name="com.hao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hao.content.model.po" />
+      <recent name="com.hao.content.config" />
+      <recent name="com.hao.content.mapper" />
       <recent name="com.hao.centent.model.po" />
       <recent name="com.hao.content" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ComXCeduProject\xceduProject\xcedu-content\xcedu-content-model\src\main\java\com\hao\content\model\dto" />
+      <recent name="E:\ComXCeduProject\xceduProject\xcedu-content\xcedu-content-service\src\main\resources\com\hao\content\mapper" />
       <recent name="E:\ComXCeduProject\xceduProject\xcedusystem\xcedu-system-api\src\main\java\com\hao\system" />
       <recent name="E:\ComXCeduProject\xceduProject\xcedusystem" />
       <recent name="E:\ComXCeduProject\xceduProject" />
-      <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources" />
-      <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\test\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -144,8 +146,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ContentApplication">
-    <configuration name="CourseBaseInfoTest.TestCourseBaseMapper (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CourseCategoryMapperTest.TestSelectTreeNode">
+    <configuration name="CourseBaseInfoTest.TestCourseBaseMapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xcedu-content-service" />
       <extension name="coverage">
         <pattern>
@@ -161,44 +163,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CourseBaseInfoTest.TestCourseBaseMapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CourseCategoryMapperTest.TestSelectTreeNode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="xcedu-content-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hao.content.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.hao.content.test" />
-      <option name="MAIN_CLASS_NAME" value="com.hao.content.test.CourseBaseInfoTest" />
-      <option name="METHOD_NAME" value="TestCourseBaseMapper" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContentApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="xcedu-content-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.hao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hao.ContentApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ContentApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="xcedu-content-api" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.hao.content.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hao.content.ContentApplication" />
+      <option name="PACKAGE_NAME" value="com.hao.content" />
+      <option name="MAIN_CLASS_NAME" value="com.hao.content.CourseCategoryMapperTest" />
+      <option name="METHOD_NAME" value="TestSelectTreeNode" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -231,11 +207,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ContentApplication" />
+        <item itemvalue="JUnit.CourseCategoryMapperTest.TestSelectTreeNode" />
         <item itemvalue="Spring Boot.SystemApplication" />
-        <item itemvalue="JUnit.CourseBaseInfoTest.TestCourseBaseMapper (1)" />
-        <item itemvalue="Spring Boot.ContentApplication (2)" />
-        <item itemvalue="JUnit.CourseBaseInfoTest.TestCourseBaseMapper" />
+        <item itemvalue="Spring Boot.ContentApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +217,7 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.1932842" />
+          <option name="contentProportion" value="0.2511131" />
           <treeState>
             <expand>
               <path>
@@ -254,11 +228,6 @@
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -291,7 +260,11 @@
       <workItem from="1700833477712" duration="1867000" />
       <workItem from="1700835356034" duration="1709000" />
       <workItem from="1700837083399" duration="8961000" />
-      <workItem from="1700850419901" duration="1598000" />
+      <workItem from="1700850419901" duration="2062000" />
+      <workItem from="1700944479281" duration="185000" />
+      <workItem from="1700945109534" duration="136000" />
+      <workItem from="1701003440632" duration="5478000" />
+      <workItem from="1701016422420" duration="7278000" />
     </task>
     <task id="LOCAL-00001" summary="项目第一次提交">
       <created>1700738086042</created>
@@ -335,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700830428655</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="新增课程">
+      <created>1700852272445</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700852272445</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,9 +325,14 @@
     <MESSAGE value="项目第一次提交" />
     <MESSAGE value="spring cloud 模块划分" />
     <MESSAGE value="课程管理分页查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="课程管理分页查询" />
+    <MESSAGE value="新增课程" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增课程" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1445" y="279" key="#Inspections" timestamp="1701015344996">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1445" y="279" key="#Inspections/0.0.2560.1400@0.0.2560.1400" timestamp="1701015344996" />
     <state x="1495" y="276" key="#Notifications" timestamp="1700763057854">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -360,62 +345,62 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1094" y="271" width="1111" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700835252386" />
-    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser" timestamp="1700824401429">
+    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser" timestamp="1701020705207">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1700824401429" />
-    <state x="1565" y="518" width="678" height="369" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1700821094986">
+    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1701020705207" />
+    <state x="1565" y="518" width="678" height="369" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1701013697460">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1565" y="518" width="678" height="369" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400@0.0.2560.1400" timestamp="1700821094986" />
-    <state x="1377" y="116" key="CommitChangelistDialog2" timestamp="1700830427434">
+    <state x="1565" y="518" width="678" height="369" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400@0.0.2560.1400" timestamp="1701013697460" />
+    <state x="1353" y="116" key="CommitChangelistDialog2" timestamp="1700852271266">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1377" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1700830427434" />
+    <state x="1353" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1700852271266" />
     <state x="496" y="127" key="DiffContextDialog" timestamp="1700748994957">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="496" y="127" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700748994957" />
-    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1700839982488">
+    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1701012995682">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1700839982488" />
+    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1701012995682" />
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog" timestamp="1700738755899">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700738755899" />
-    <state width="984" height="360" key="GridCell.Tab.0.bottom" timestamp="1700852228577">
+    <state width="1160" height="447" key="GridCell.Tab.0.bottom" timestamp="1701024305572">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="984" height="360" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
-    <state width="984" height="360" key="GridCell.Tab.0.center" timestamp="1700852228577">
+    <state width="1160" height="447" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1701024305572" />
+    <state width="1160" height="447" key="GridCell.Tab.0.center" timestamp="1701024305571">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="984" height="360" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
-    <state width="984" height="360" key="GridCell.Tab.0.left" timestamp="1700852228576">
+    <state width="1160" height="447" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1701024305571" />
+    <state width="1160" height="447" key="GridCell.Tab.0.left" timestamp="1701024305571">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="984" height="360" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228576" />
-    <state width="984" height="360" key="GridCell.Tab.0.right" timestamp="1700852228577">
+    <state width="1160" height="447" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1701024305571" />
+    <state width="1160" height="447" key="GridCell.Tab.0.right" timestamp="1701024305572">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="984" height="360" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
-    <state width="984" height="360" key="GridCell.Tab.1.bottom" timestamp="1700852228578">
+    <state width="1160" height="447" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1701024305572" />
+    <state width="1160" height="447" key="GridCell.Tab.1.bottom" timestamp="1701024305572">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="984" height="360" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228578" />
-    <state width="984" height="360" key="GridCell.Tab.1.center" timestamp="1700852228577">
+    <state width="1160" height="447" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1701024305572" />
+    <state width="1160" height="447" key="GridCell.Tab.1.center" timestamp="1701024305572">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="984" height="360" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
-    <state width="984" height="360" key="GridCell.Tab.1.left" timestamp="1700852228577">
+    <state width="1160" height="447" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1701024305572" />
+    <state width="1160" height="447" key="GridCell.Tab.1.left" timestamp="1701024305572">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="984" height="360" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228577" />
-    <state width="984" height="360" key="GridCell.Tab.1.right" timestamp="1700852228578">
+    <state width="1160" height="447" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1701024305572" />
+    <state width="1160" height="447" key="GridCell.Tab.1.right" timestamp="1701024305572">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="984" height="360" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1700852228578" />
+    <state width="1160" height="447" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1701024305572" />
     <state width="984" height="360" key="GridCell.Tab.2.bottom" timestamp="1700842919265">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -440,14 +425,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1027" y="269" width="1422" height="933" key="NewModule_or_Project.wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1700832569479" />
-    <state x="810" y="207" key="SettingsEditor" timestamp="1700837277395">
+    <state x="810" y="207" key="SettingsEditor" timestamp="1701015817938">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="810" y="207" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1700837277395" />
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1700830441771">
+    <state x="810" y="207" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1701015817938" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1700852280083">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700830441771" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1700852280083" />
     <state x="1539" y="100" width="929" height="1200" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1700737684274">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -477,9 +462,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/test/java/com/hao/content/CourseCategoryMapperTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -13,7 +13,7 @@ logging:
 #mybatis-plus:
 #  mapper-locations=classpath:com/hao/resources/mapper/*
 mybatis-plus:
-  mapper-locations: classpath:resources/com/hao/content/mapper/*
+  mapper-locations: classpath:com/hao/resources/mapper/*
   configuration:
     auto-mapping-behavior: partial
     map-underscore-to-camel-case: true
