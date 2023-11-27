@@ -5,11 +5,15 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.hao.base.model.PageParams;
 import com.hao.base.model.PageResult;
+import com.hao.content.mapper.CourseCategoryMapper;
+import com.hao.content.mapper.CourseMarketMapper;
 import com.hao.content.model.dto.AddCourseDto;
 import com.hao.content.model.dto.CourseBaseInfoDto;
+import com.hao.content.model.dto.EditCourseDto;
 import com.hao.content.model.dto.QueryCourseParamsDTO;
 import com.hao.content.model.po.CourseBase;
 import com.hao.content.mapper.CourseBaseInfoMapper;
+import com.hao.content.model.po.CourseCategory;
 import com.hao.content.model.po.CourseMarket;
 import com.hao.content.service.CourseBaseInfoService;
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +31,10 @@ import java.util.List;
 public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
     @Autowired
     private CourseBaseInfoMapper courseBaseInfoMapper;
+    @Autowired
+    private CourseMarketMapper courseMarketMapper;
+    @Autowired
+    private CourseCategoryMapper courseCategoryMapper;
 
     public PageResult<CourseBase> selectPage(PageParams pageParams, QueryCourseParamsDTO queryCourseParamsDTO) {
         PageHelper.startPage(pageParams.getPageNo().intValue(),pageParams.getPageSize().intValue());
@@ -91,24 +99,86 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         BeanUtils.copyProperties(addCourseDto,courseMarket);
         Long courseId = courseBase.getId();
         courseMarket.setId(courseId);
-        saveCourseMarket(courseMarket);
+//        saveCourseMarket(courseMarket);
         return null;
     }
 
-    public int saveCourseMarket(CourseMarket courseMarket){
-        String charge = courseMarket.getCharge();
-        if(StringUtils.isEmpty(charge)){
-            throw new RuntimeException("收费规则为空");
+    /**
+     * 课程修改接口
+     * @author hao
+     */
+    @Transactional
+    public CourseBaseInfoDto getCourseBaseById(Long courseId) {
+        CourseBase courseBase = new CourseBase();
+        CourseBaseInfoDto courseBaseInfoDto = new CourseBaseInfoDto();
+        courseBase = courseBaseInfoMapper.selectById(courseId);
+        if (courseBase == null){
+            throw new RuntimeException("查询结果为空");
         }
+        BeanUtils.copyProperties(courseBase,courseBaseInfoDto);
 
-        if(charge.equals("201001")){
-            if(courseMarket.getPrice() == null || courseMarket.getPrice().floatValue() <= 0){
-                throw new RuntimeException("课程的价格不能为空并且必须大于0");
-            }
+        CourseMarket courseMarket = courseMarketMapper.selectById(courseId);
+        if (courseMarket == null){
+            throw new RuntimeException("查询结果为空");
         }
+        BeanUtils.copyProperties(courseMarket,courseBaseInfoDto);
 
-        Long id = courseMarket.getId();
-        c
+        CourseCategory courseCategory = courseCategoryMapper.selectById(courseBase.getMt());
+        courseBaseInfoDto.setMtName(courseCategory.getName());
+        CourseCategory courseCategory1 = courseCategoryMapper.selectById(courseBase.getSt());
+        courseBaseInfoDto.setStName(courseCategory1.getName());
 
+        return courseBaseInfoDto;
     }
+
+    @Transactional
+    @Override
+    public CourseBaseInfoDto updateCourseBase(Long companyId, EditCourseDto editCourseDto) {
+        Long courseId = editCourseDto.getId();
+        CourseBase courseBase = courseBaseInfoMapper.selectById(courseId);
+        if (courseBase == null){
+            throw new RuntimeException("课程不存在");
+        }
+
+        if (!courseBase.getCompanyId().equals(companyId)){
+            throw new RuntimeException("本机构只能修改本机构的课程");
+        }
+
+        BeanUtils.copyProperties(editCourseDto,courseBase);
+        courseBase.setChangeDate(LocalDateTime.now());
+
+        Integer count = courseBaseInfoMapper.updateById(courseBase);
+
+        CourseMarket courseMarket = courseMarketMapper.selectById(courseId);
+        if (courseMarket == null){
+            throw new RuntimeException("课程信息不存在");
+        }
+        BeanUtils.copyProperties(editCourseDto,courseMarket);
+        count += courseMarketMapper.updateById(courseMarket);
+
+        if (!count.equals(2)){
+            throw new RuntimeException("操作异常！");
+        }
+
+        CourseBaseInfoDto courseBaseInfoDto = this.getCourseBaseById(courseId);
+        return courseBaseInfoDto;
+    }
+
+
+//    public int saveCourseMarket(CourseMarket courseMarket){
+//        String charge = courseMarket.getCharge();
+//        if(StringUtils.isEmpty(charge)){
+//            throw new RuntimeException("收费规则为空");
+//        }
+//
+//        if(charge.equals("201001")){
+//            if(courseMarket.getPrice() == null || courseMarket.getPrice().floatValue() <= 0){
+//                throw new RuntimeException("课程的价格不能为空并且必须大于0");
+//            }
+//        }
+//
+//        Long id = courseMarket.getId();
+//
+//
+//    }
 }

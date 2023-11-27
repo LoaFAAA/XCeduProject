@@ -2,12 +2,14 @@ package com.hao.content.model.dto;
 
 import com.hao.content.model.po.CourseBase;
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * @description 课程基本信息dto
  * @author hao
  */
 @Data
+@ToString(callSuper = true)
 public class CourseBaseInfoDto extends CourseBase {
 
 
@@ -56,5 +58,6 @@ public class CourseBaseInfoDto extends CourseBase {
   * 小分类名称
   */
  private String stName;
+
 
 }

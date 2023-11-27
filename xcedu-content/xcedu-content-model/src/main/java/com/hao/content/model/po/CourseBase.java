@@ -13,9 +13,6 @@ import java.time.LocalDateTime;
  */
 @Data
 @ToString
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class CourseBase implements Serializable {
 
     private static final long serialVersionUID = 1L;
