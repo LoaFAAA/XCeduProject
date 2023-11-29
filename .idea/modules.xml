@@ -6,6 +6,11 @@
       <module fileurl="file://$PROJECT_DIR$/xcedu-content/xcedu-content-api/xcedu-content-api.iml" filepath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/xcedu-content-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedu-content/xcedu-content-model/xcedu-content-model.iml" filepath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/xcedu-content-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedu-content/xcedu-content-service/xcedu-content-service.iml" filepath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/xcedu-content-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedu-gateway/xcedu-gateway.iml" filepath="$PROJECT_DIR$/xcedu-gateway/xcedu-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedu-media/xcedu-media.iml" filepath="$PROJECT_DIR$/xcedu-media/xcedu-media.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedu-media/xcedu-media-api/xcedu-media-api.iml" filepath="$PROJECT_DIR$/xcedu-media/xcedu-media-api/xcedu-media-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedu-media/xcedu-media-model/xcedu-media-model.iml" filepath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/xcedu-media-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xcedu-media/xcedu-media-service/xcedu-media-service.iml" filepath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/xcedu-media-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedusystem/xcedu-system-api/xcedu-system-api.iml" filepath="$PROJECT_DIR$/xcedusystem/xcedu-system-api/xcedu-system-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedusystem/xcedu-system-model/xcedu-system-model.iml" filepath="$PROJECT_DIR$/xcedusystem/xcedu-system-model/xcedu-system-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedusystem/xcedu-system-service/xcedu-system-service.iml" filepath="$PROJECT_DIR$/xcedusystem/xcedu-system-service/xcedu-system-service.iml" />

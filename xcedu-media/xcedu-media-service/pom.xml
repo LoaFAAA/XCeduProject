@@ -3,15 +3,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>xcedu-content</artifactId>
+        <artifactId>xcedu-media</artifactId>
         <groupId>com.hao</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>xcedu-content-service</artifactId>
+    <artifactId>xcedu-media-service</artifactId>
+    <name>xcedu-media-service</name>
+    <description>xcedu-media-service</description>
+
     <dependencies>
         <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.hao</groupId>
-            <artifactId>xcedu-content-model</artifactId>
+            <artifactId>xcedu-media-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
@@ -26,19 +33,6 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper</artifactId>
-            <version>5.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-context</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
         <!-- Spring Boot 集成 Junit -->
         <dependency>
@@ -63,6 +57,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>4.8.1</version>
+        </dependency>
+
     </dependencies>
 
 </project>

@@ -1,11 +1,23 @@
 spring:
   application:
     name: content-service
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/xcplus_project?serverTimezone=UTC&userUnicode=true&useSSL=false&
-    username: root
-    password: 123456
+  cloud:
+    nacos:
+      server-addr: 192.168.101.65:8848
+      discovery:
+        namespace: xcproject
+        group: xceduProject
+      config:
+        namespace: xcproject
+        group: xceduProject
+        file-extension: yaml
+        refresh-enabled: true
+    shared-configs:
+      - data-id: swagger-${spring.profiles.active}.yaml
+        group: xceducommon
+        refresh: true
+  profiles:
+    active: xcproject
 
 logging:
   config: classpath:log4j2-dev.xml  # 日志文件配置路径
@@ -18,9 +30,9 @@ mybatis-plus:
     auto-mapping-behavior: partial
     map-underscore-to-camel-case: true
 
-swagger:
-  title: "学成在线内容管理系统"
-  description: "内容系统管理系统对课程相关信息进行管理"
-  base-package: com.hao.content
-  enabled: true
-  version: 1.0.0
+#swagger:
+#  title: "学成在线内容管理系统"
+#  description: "内容系统管理系统对课程相关信息进行管理"
+#  base-package: com.hao.content
+#  enabled: true
+#  version: 1.0.0
