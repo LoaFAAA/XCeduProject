@@ -4,4 +4,6 @@ import com.hao.content.model.po.CourseMarket;
 
 public interface CourseMarketService {
     CourseMarket selectById(Long id);
+
+    int CreateMarket(CourseMarket courseMarket);
 }

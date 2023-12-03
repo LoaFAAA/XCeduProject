@@ -6,14 +6,16 @@ import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 /**
  * @description 添加课程dto
  * @author hao
  */
+
 @Data
 @ApiModel(value="AddCourseDto", description="新增课程基本信息")
-public class AddCourseDto {
+public class AddCourseDto implements Serializable {
 
  @NotEmpty(message = "课程名称不能为空")
  @ApiModelProperty(value = "课程名称", required = true)

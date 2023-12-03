@@ -29,26 +29,33 @@ public class CourseCategoryServiceImpl implements CourseCategoryService {
     private CourseCategoryMapper courseCategoryMapper;
 
     public List<CourseCategoryTreeDto> queryTreeNodes(String id) {
+        //查询出所有课程分类，并按照各级节点进行排序
         List<CourseCategoryTreeDto> courseCategoryTreeDtos = courseCategoryMapper.selectTreeNodes(id);
-        //先将list转成map，key就是结点的id
-        Map<String, CourseCategoryTreeDto> mapTemp = courseCategoryTreeDtos.stream().filter(item -> !id.equals(item.getId())).collect(Collectors.toMap(key -> key.getId(), value -> value, (key1, key2) -> key2));
+        //先将list转成map，key就是结点的id，value为各个课程的全部信息，如果遇见key重复的问题，就保留后者
+        Map<String,CourseCategoryTreeDto> maptemp = courseCategoryTreeDtos.stream().filter(item -> !id.equals(item.getId())).collect(Collectors.toMap(item -> item.getId(), value -> value, (key1,key2) -> key2));
+        //
+
+        //排除掉根节点及三级节点，courseCategoryList列表元素为各个二级节点,是最终的返回数据
         List<CourseCategoryTreeDto> courseCategoryList = new ArrayList<>();
         courseCategoryTreeDtos.stream().filter(item -> !id.equals(item.getId())).forEach(item -> {
+            //将二级元素加入返回列表
             if (item.getParentid().equals(id)){
                 courseCategoryList.add(item);
             }
-            //找到节点的父节点
-            CourseCategoryTreeDto courseCategoryParent = mapTemp.get(item.getParentid());
-            if(courseCategoryParent!=null){
-                if(courseCategoryParent.getChildrenTreeNodes()==null){
-                    //如果该父节点的ChildrenTreeNodes属性为空要new一个集合，因为要向该集合中放它的子节点
-                    courseCategoryParent.setChildrenTreeNodes(new ArrayList<CourseCategoryTreeDto>());
+            //找出节点的父节点
+            CourseCategoryTreeDto parentTreeDto = maptemp.get(item.getParentid());
+            //因为二级节点的父节点为空，将其排除掉
+            if (parentTreeDto != null){
+                //对父节点的子节点列表进行判空，为空时新建该父节点的子节点列表
+                if (parentTreeDto.getChildrenTreeNodes() == null){
+                List<CourseCategoryTreeDto> parentList = new ArrayList<CourseCategoryTreeDto>();
+                    parentTreeDto.setChildrenTreeNodes(parentList);
                 }
-                //到每个节点的子节点放在父节点的childrenTreeNodes属性中
-                courseCategoryParent.getChildrenTreeNodes().add(item);
+                //将该节点添加至父节点的列表中
+                parentTreeDto.getChildrenTreeNodes().add(item);
             }
         });
-
+        //返回由二级节点构成的列表
         return courseCategoryList;
     }
 

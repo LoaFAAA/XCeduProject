@@ -32,7 +32,7 @@ public class CourseBaseInfoController {
     }
 
     /**
-     * 课程修改接口
+     * 根据id查询课程接口
      * @param courseId
      * @author hao
      */

@@ -26,4 +26,10 @@
         select * from t1
         order by t1.id
     </select>
+
+    <select id="SelectByCourseId" resultType="java.lang.String">
+        select name from course_category
+        where id = #{CourseId}
+    </select>
+
 </mapper>

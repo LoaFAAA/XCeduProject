@@ -43,4 +43,10 @@ public class CourseBaseInfoTest {
             System.out.println("hhhh");
         }
     }
+
+    @Test
+    public void TestI(){
+        Integer n = 100;
+        System.out.println(n+1);
+    }
 }
