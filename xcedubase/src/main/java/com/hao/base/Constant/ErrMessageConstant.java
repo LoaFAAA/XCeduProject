@@ -14,4 +14,5 @@ public class ErrMessageConstant {
     public static final String PASSWORD_EDIT_FAILED = "密码修改失败";
     public static final String ORDER_NOT_FOUND = "订单不存在";
     public static final String ALREADY_EXISTS = "用户名已存在";
+    public static final String NONEXIST_FIELD = "不存在的字段";
 }

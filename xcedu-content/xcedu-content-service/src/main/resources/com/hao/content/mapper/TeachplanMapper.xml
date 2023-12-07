@@ -3,6 +3,23 @@
 <mapper namespace="com.hao.content.mapper.TeachplanMapper">
 
     <select id="selectTreeNodes" resultType="com.hao.content.model.dto.TeachplanDto">
-        select * from teachplan
+        select * from teachplan as t1 inner join teachplan as t2
+        on
+        <if test="courseId != null and courseId != ''">
+            t2.parentid = #{courseId}
+        </if>
+        left join teachplan_media  as tm on
+        <if test="courseId != null and courseId != ''">
+            tm.id = #{courseId}
+        </if>
     </select>
+
+    <delete id="DeleteTeachplanById" parameterType="long">
+        delete from teachplan
+        <where>
+            <if test="courseId != null">
+                id = #{courseId}
+            </if>
+        </where>
+    </delete>
 </mapper>

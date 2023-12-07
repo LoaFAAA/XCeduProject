@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hao.content.mapper.TeachplanMediaMapper">
+    <delete id="deleteByCourseId" parameterType="long" >
+        delete from teachplan_media
+        <where>
+            <if test="TeachplanId != null">
+                teachplan_id = #{TeachplanId}
+            </if>
+        </where>
+    </delete>
 
     <select id="selectTreeNodes" resultType="com.hao.content.model.dto.TeachplanDto">
         select * from teachplan

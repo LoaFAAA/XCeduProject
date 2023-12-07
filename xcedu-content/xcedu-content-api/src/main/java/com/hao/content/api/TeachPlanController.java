@@ -1,11 +1,13 @@
 package com.hao.content.api;
 
+import com.hao.base.Constant.ErrMessageConstant;
 import com.hao.content.model.dto.SaveTeachplanDto;
 import com.hao.content.model.dto.TeachplanDto;
 import com.hao.content.service.TeachplanService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.Constants;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,13 +37,22 @@ public class TeachPlanController {
     }
 
     /**
-     * 课程计划新增接口
-     * @param saveTeachplanDto
+     * 课程计划删除接口
+     * @param teachplanId
      * @author hao
      */
-    @ApiOperation("课程计划新增/修改接口")
-    @PostMapping("/teachplan")
-    public void saveTeachplan(@RequestBody SaveTeachplanDto saveTeachplanDto){
-
+    @ApiOperation("课程计划删除接口")
+    @DeleteMapping("/teachplan/{teachplanId}")
+    public void DeleteTeachplanById(@PathVariable Long teachplanId){
+        if (teachplanId == null){
+            throw new RuntimeException(ErrMessageConstant.NONEXIST_FIELD);
+        }
+        teachplanService.DeleteTeachplanById(teachplanId);
     }
+
+    /**
+     * 课程计划查询接口
+     * @param courseId
+     * @author hao
+     */
 }

@@ -53,6 +53,7 @@ public class CourseBaseInfoController {
     @PutMapping("/course")
     public CourseBaseInfoDto EditCourseBase(@RequestBody EditCourseDto editCourseDto){
         Long companyId = 1232141425L;
+
         return courseBaseInfoService.updateCourseBase(companyId,editCourseDto);
     }
 }

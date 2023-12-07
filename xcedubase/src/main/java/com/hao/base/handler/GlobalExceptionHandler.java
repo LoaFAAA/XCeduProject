@@ -1,6 +1,5 @@
 package com.hao.base.handler;
 
-import com.hao.base.Constant.ErrMessageConstant;
 import com.hao.base.exception.RestErrorInfoResponse;
 import com.hao.base.exception.XCException;
 import lombok.extern.slf4j.Slf4j;
@@ -13,13 +12,14 @@ public class GlobalExceptionHandler {
 
     //定义捕获自定义XCException时的处理
     @ResponseBody
-    @ExceptionHandler(XCException.class)
+    @ExceptionHandler(value = XCException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public RestErrorInfoResponse globalException(XCException xce){
+    public RestErrorInfoResponse customException(XCException xce){
         log.info("系统存在错误："+xce.getErrMessage()+xce);
-        String errMessage = xce.getErrMessage();
 
-        return new RestErrorInfoResponse(errMessage);
+        String errMessage = xce.getErrMessage();
+        RestErrorInfoResponse restErrorInfoResponse = new RestErrorInfoResponse(errMessage);
+        return restErrorInfoResponse;
     }
 
     //定义捕获系统的Exception时的处理

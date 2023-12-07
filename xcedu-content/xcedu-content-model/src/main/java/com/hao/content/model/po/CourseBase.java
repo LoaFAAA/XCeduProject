@@ -3,6 +3,7 @@ package com.hao.content.model.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 
 import java.io.Serializable;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @ToString
+@TableName("course_base")
 public class CourseBase implements Serializable {
 
     private static final long serialVersionUID = 1L;

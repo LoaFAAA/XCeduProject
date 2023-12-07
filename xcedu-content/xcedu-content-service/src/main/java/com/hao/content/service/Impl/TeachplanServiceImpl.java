@@ -1,7 +1,9 @@
 package com.hao.content.service.Impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.hao.base.exception.XCException;
 import com.hao.content.mapper.TeachplanMapper;
+import com.hao.content.mapper.TeachplanMediaMapper;
 import com.hao.content.model.dto.SaveTeachplanDto;
 import com.hao.content.model.dto.TeachplanDto;
 import com.hao.content.model.po.Teachplan;
@@ -17,12 +19,19 @@ import java.util.List;
 public class TeachplanServiceImpl implements TeachplanService {
     @Autowired
     private TeachplanMapper teachplanMapper;
+    @Autowired
+    private TeachplanMediaMapper teachplanMediaMapper;
 
+    /**
+     * 根据id查询课程计划接口
+     * @param courseId
+     * @author hao
+     */
     @Transactional
     @Override
     public List<TeachplanDto> findTeachplanTree(Long courseId) {
         if (courseId == null){
-            throw new RuntimeException("查询课程id为空");
+            throw new XCException("查询课程id为空");
         }
 
         List<TeachplanDto> teachplanDtoList = teachplanMapper.selectTreeNodes(courseId);
@@ -30,6 +39,11 @@ public class TeachplanServiceImpl implements TeachplanService {
         return teachplanDtoList;
     }
 
+    /**
+     * 新增或修改课程计划接口
+     * @param saveTeachplanDto
+     * @author hao
+     */
     @Transactional
     @Override
     public void saveTeachplan(SaveTeachplanDto saveTeachplanDto) {
@@ -47,6 +61,31 @@ public class TeachplanServiceImpl implements TeachplanService {
             Teachplan teachplan1 = teachplanMapper.selectById(saveTeachplanDto.getId());
             BeanUtils.copyProperties(saveTeachplanDto,teachplan1);
             teachplanMapper.updateById(teachplan1);
+        }
+    }
+
+    /**
+     * 根据id删除课程计划接口
+     * @param courseId
+     * @author hao
+     */
+    @Transactional
+    @Override
+    public void DeleteTeachplanById(Long courseId) {
+        Teachplan Deleteteachplan = teachplanMapper.selectById(courseId);
+
+        if (Deleteteachplan == null){
+            throw new XCException("删除失败，不存在该id课程计划");
+        }
+
+        int count = teachplanMapper.DeleteTeachplanById(courseId);
+        if (count != 1){
+            throw new XCException("删除课程计划失败！");
+        }
+
+        count += teachplanMediaMapper.deleteByCourseId(Deleteteachplan.getId());
+        if (count != 2){
+            throw new XCException("删除课程计划的视频失败！");
         }
     }
 

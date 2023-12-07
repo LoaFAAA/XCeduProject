@@ -9,4 +9,6 @@ public interface TeachplanService {
     List<TeachplanDto> findTeachplanTree(Long courseId);
 
     public void saveTeachplan(SaveTeachplanDto saveTeachplanDto);
+
+    void DeleteTeachplanById(Long courseId);
 }

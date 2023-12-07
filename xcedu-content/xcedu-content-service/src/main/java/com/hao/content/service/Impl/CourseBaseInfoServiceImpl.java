@@ -43,6 +43,10 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
     @Autowired
     private CourseMarketService courseMarketService;
 
+    /**
+     * 课程分页查询接口
+     * @author hao
+     */
     public PageResult<CourseBase> selectPage(PageParams pageParams, QueryCourseParamsDTO queryCourseParamsDTO) {
         PageHelper.startPage(pageParams.getPageNo().intValue(),pageParams.getPageSize().intValue());
         Page<CourseBase> page = courseBaseInfoMapper.selectPage(queryCourseParamsDTO);
@@ -58,6 +62,10 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         return pageResult;
     }
 
+    /**
+     * 创建课程接口
+     * @author hao
+     */
     @Transactional
     public CourseBaseInfoDto createCourseBase(Long companyId, AddCourseDto addCourseDto) {
         //参数的合法性校验
@@ -127,7 +135,7 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
     }
 
     /**
-     * 课程修改接口
+     * 根据id查询课程接口
      * @author hao
      */
     @Transactional
@@ -136,7 +144,7 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         CourseBaseInfoDto courseBaseInfoDto = new CourseBaseInfoDto();
         courseBase = courseBaseInfoMapper.selectById(courseId);
         if (courseBase == null){
-            throw new RuntimeException("查询结果为空");
+            throw new XCException("查询结果为空");
         }
         BeanUtils.copyProperties(courseBase,courseBaseInfoDto);
 
@@ -154,24 +162,33 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         return courseBaseInfoDto;
     }
 
+    /**
+     * 修改课程接口
+     * @author hao
+     */
     @Transactional
     @Override
     public CourseBaseInfoDto updateCourseBase(Long companyId, EditCourseDto editCourseDto) {
         Long courseId = editCourseDto.getId();
+        //查询本次修改的课程信息
         CourseBase courseBase = courseBaseInfoMapper.selectById(courseId);
+
+        //验证课程机构及有效性
         if (courseBase == null){
-            throw new RuntimeException("课程不存在");
+            throw new XCException("课程不存在");
         }
 
         if (!courseBase.getCompanyId().equals(companyId)){
-            throw new RuntimeException("本机构只能修改本机构的课程");
+            throw new XCException("本机构只能修改本机构的课程");
         }
 
+        //组装要修改的课程信息
         BeanUtils.copyProperties(editCourseDto,courseBase);
         courseBase.setChangeDate(LocalDateTime.now());
 
         Integer count = courseBaseInfoMapper.updateById(courseBase);
 
+        //组装要修改的课程营销信息
         CourseMarket courseMarket = courseMarketMapper.selectById(courseId);
         if (courseMarket == null){
             throw new RuntimeException("课程信息不存在");
@@ -179,11 +196,13 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         BeanUtils.copyProperties(editCourseDto,courseMarket);
         count += courseMarketMapper.updateById(courseMarket);
 
+        //验证本次修改业务整体成功与否
         if (!count.equals(2)){
             throw new RuntimeException("操作异常！");
         }
 
         CourseBaseInfoDto courseBaseInfoDto = this.getCourseBaseById(courseId);
+
         return courseBaseInfoDto;
     }
 

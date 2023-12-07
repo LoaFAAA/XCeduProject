@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author hao
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.hao", "com.hao.base.handler"})
 @EnableSwagger2Doc
 public class ContentApplication {
 
