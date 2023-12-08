@@ -55,4 +55,9 @@ public class TeachPlanController {
      * @param courseId
      * @author hao
      */
+    @ApiOperation("课程计划新增或修改接口")
+    @PostMapping("/teachplan")
+    public void saveTeachplan(@RequestBody SaveTeachplanDto teachplanDto){
+        teachplanService.saveTeachplan(teachplanDto);
+    }
 }

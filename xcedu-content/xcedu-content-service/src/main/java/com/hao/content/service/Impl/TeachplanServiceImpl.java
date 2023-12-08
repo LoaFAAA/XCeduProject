@@ -66,23 +66,48 @@ public class TeachplanServiceImpl implements TeachplanService {
 
     /**
      * 根据id删除课程计划接口
-     * @param courseId
+     * @param teachplanId
      * @author hao
      */
     @Transactional
     @Override
-    public void DeleteTeachplanById(Long courseId) {
-        Teachplan Deleteteachplan = teachplanMapper.selectById(courseId);
+    public void DeleteTeachplanById(Long teachplanId) {
+        //对删除序号判空
+        if (teachplanId == null){
+            throw new XCException("未获得删除课程计划的id");
+        }
 
+        //获取删除序号的课程计划
+        Teachplan Deleteteachplan = teachplanMapper.selectById(teachplanId);
+
+        //对删除课程信息判空
         if (Deleteteachplan == null){
             throw new XCException("删除失败，不存在该id课程计划");
         }
 
-        int count = teachplanMapper.DeleteTeachplanById(courseId);
-        if (count != 1){
-            throw new XCException("删除课程计划失败！");
-        }
+        //查询删除课程计划的子章节
+        LambdaQueryWrapper<Teachplan> QueryWrapper = new LambdaQueryWrapper<>();
+        QueryWrapper.eq(Teachplan::getParentid,Deleteteachplan.getId());
+        List<Teachplan> ChildrenteachplanList = teachplanMapper.selectList(QueryWrapper);
 
+        //判定课程计划为章OR节
+        int count = 0;
+        if (Deleteteachplan.getGrade().equals(1)){
+            //判断课程计划子章节是否为空
+            if (ChildrenteachplanList.size() != 0){
+                throw new XCException("所删除章节仍有子章节，无法删除");
+            }else {
+                count += teachplanMapper.DeleteTeachplanById(teachplanId);
+                if (count != 1){
+                    throw new XCException("删除课程计划失败！");
+                }
+            }
+        }else {
+            count += teachplanMapper.DeleteTeachplanById(teachplanId);
+            if (count != 1){
+                throw new XCException("删除课程计划失败！");
+            }
+        }
         count += teachplanMediaMapper.deleteByCourseId(Deleteteachplan.getId());
         if (count != 2){
             throw new XCException("删除课程计划的视频失败！");

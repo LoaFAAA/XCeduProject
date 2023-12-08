@@ -1,17 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hao.content.mapper.TeachplanMapper">
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, pname, parentid, grade, media_type, start_time, end_time, description, timelength, orderby, course_id, course_pub_id, status, is_preview, create_date, change_date
+    </sql>
 
-    <select id="selectTreeNodes" resultType="com.hao.content.model.dto.TeachplanDto">
-        select * from teachplan as t1 inner join teachplan as t2
+    <resultMap id="treeNodeResultMap" type="com.hao.content.model.dto.TeachplanDto">
+        <!-- 一级数据映射 -->
+        <id column="t1_id"  property="id" />
+        <result column="t1_pname"  property="pname" />
+        <result column="t1_parentId"  property="parentid" />
+        <result column="t1_grade"  property="grade" />
+        <result column="t1_mediaType"  property="mediaType" />
+        <result column="t1_startTime"  property="startTime" />
+        <result column="t1_endTime"  property="endTime" />
+        <result column="t1_orderby"  property="orderby" />
+        <result column="t1_courseId"  property="courseId" />
+        <result column="t1_coursePubId"  property="coursePubId" />
+        <!-- 一级中包含多个二级数据 -->
+        <collection property="teachPlanTreeNodes" ofType="com.hao.content.model.dto.TeachplanDto">
+            <!-- 二级数据映射 -->
+            <id column="t2_id"  property="id" />
+            <result column="t2_pname"  property="pname" />
+            <result column="t2_parentId"  property="parentid" />
+            <result column="t2_grade"  property="grade" />
+            <result column="t2_mediaType"  property="mediaType" />
+            <result column="t2_startTime"  property="startTime" />
+            <result column="t2_endTime"  property="endTime" />
+            <result column="t2_orderby"  property="orderby" />
+            <result column="t2_courseId"  property="courseId" />
+            <result column="t2_coursePubId"  property="coursePubId" />
+            <!-- 连表查询的二级数据映射 -->
+            <association property="teachplanMedia" javaType="com.hao.content.model.po.TeachplanMedia">
+                <id column="teachplanMediaId" property="id" />
+                <result column="mediaFilename" property="mediaFilename" />
+                <result column="mediaId" property="mediaId" />
+            </association>
+        </collection>
+    </resultMap>
+
+    <select id="selectTreeNodes" parameterType="long" resultMap="treeNodeResultMap">
+        select
+                  t1.id as t1_id,
+                  t1.pname as t1_pname,
+                  t1.parentid as t1_parentId,
+                  t1.grade as t1_grade,
+                  t1.media_type as t1_mediaType,
+                  t1.start_time as t1_startTime,
+                  t1.end_time as t1_endTime,
+                  t1.orderby as t1_orderby,
+                  t1.course_id as t1_courseId,
+                  t1.course_pub_id as t1_coursePubId,
+                  t2.id as t2_id,
+                  t2.pname as t2_pname,
+                  t2.parentid as t2_parentId,
+                  t2.grade as t2_grade,
+                  t2.media_type as t2_mediaType,
+                  t2.start_time as t2_startTime,
+                  t2.end_time as t2_endTime,
+                  t2.orderby as t2_orderby,
+                  t2.course_id as t2_courseId,
+                  t2.course_pub_id as t2_coursePubId,
+                  tm.media_fileName as mediaFilename,
+                  tm.id as teachplanMediaId,
+                  tm.media_id as mediaId
+
+        from teachplan as t1 inner join teachplan as t2
         on
         <if test="courseId != null and courseId != ''">
-            t2.parentid = #{courseId}
+            t1.id = t2.parentid
         </if>
-        left join teachplan_media  as tm on
-        <if test="courseId != null and courseId != ''">
-            tm.id = #{courseId}
-        </if>
+        left join teachplan_media  as tm on tm.teachplan_id = t2.id
+        <where>
+            t1.parentid = 0
+            <if test="courseId != null and courseId != ''">
+                and t1.course_id = #{courseId}
+            </if>
+        </where>
+        order by t1.orderby
     </select>
 
     <delete id="DeleteTeachplanById" parameterType="long">

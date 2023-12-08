@@ -15,13 +15,12 @@ spring:
         refresh-enabled: true
         extension-configs:
           - data-id: media-service-${spring.profiles.active}.yaml
-            group: xuecheng-plus-project
+            group: xceduProject
             refresh: true
         shared-configs:
           - data-id: swagger-${spring.profiles.active}.yaml
             group: xceducommon
             refresh: true
-
   profiles:
     active: xcproject
 

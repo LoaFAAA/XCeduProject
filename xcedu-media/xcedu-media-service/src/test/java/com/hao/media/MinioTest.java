@@ -4,6 +4,7 @@ import com.j256.simplemagic.ContentInfo;
 import com.j256.simplemagic.ContentInfoUtil;
 import io.minio.*;
 import io.minio.errors.*;
+import io.minio.messages.Item;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
@@ -19,7 +20,7 @@ import java.io.*;
  */
 public class MinioTest {
 
-    MinioClient minioClient =
+    static MinioClient minioClient =
             MinioClient.builder()
                     .endpoint("http://192.168.101.65:9000")
                     .credentials("minioadmin", "minioadmin")
@@ -30,24 +31,22 @@ public class MinioTest {
 
         //通过扩展名得到媒体资源类型 mimeType
         //根据扩展名取出mimeType
-        ContentInfo extensionMatch = ContentInfoUtil.findExtensionMatch(".mp4");
-        String mimeType = MediaType.APPLICATION_OCTET_STREAM_VALUE;//通用mimeType，字节流
-        if(extensionMatch!=null){
-            mimeType = extensionMatch.getMimeType();
+        ContentInfo extensionMatch = ContentInfoUtil.findMimeTypeMatch(".mp4");
+        String mineType = MediaType.APPLICATION_OCTET_STREAM_VALUE;
+        if (extensionMatch != null){
+            mineType = extensionMatch.getMimeType();
         }
 
-        //上传文件的参数信息
-        UploadObjectArgs uploadObjectArgs = UploadObjectArgs.builder()
-                .bucket("testbucket")//桶
-                .filename("D:\\develop\\upload\\1.mp4") //指定本地文件路径
-//                .object("1.mp4")//对象名 在桶下存储该文件
-                .object("test/01/1.mp4")//对象名 放在子目录下
-                .contentType(mimeType)//设置媒体文件类型
-                .build();
 
         //上传文件
-        minioClient.uploadObject(uploadObjectArgs);
+        UploadObjectArgs testUpload = UploadObjectArgs.builder()
+                .bucket("testbucket")
+                .filename("D:\\minIOTest\\1.mp4")
+                .object("test/1t.mp4")
+                .contentType(mineType)
+                .build();
 
+        minioClient.uploadObject(testUpload);
 
 
     }
@@ -56,7 +55,10 @@ public class MinioTest {
     public void test_delete() throws Exception {
 
         //RemoveObjectArgs
-        RemoveObjectArgs removeObjectArgs = RemoveObjectArgs.builder().bucket("testbucket").object("1.mp4").build();
+        RemoveObjectArgs removeObjectArgs = RemoveObjectArgs.builder()
+                .bucket("testbucket")
+                .object("test/1t.mp4")
+                .build();
 
         //删除文件
         minioClient.removeObject(removeObjectArgs);
@@ -69,22 +71,34 @@ public class MinioTest {
     @Test
     public void test_getFile() throws Exception {
 
-        GetObjectArgs getObjectArgs = GetObjectArgs.builder().bucket("testbucket").object("test/01/1.mp4").build();
-        //查询远程服务获取到一个流对象
-        FilterInputStream inputStream = minioClient.getObject(getObjectArgs);
-        //指定输出流
-        FileOutputStream outputStream = new FileOutputStream(new File("D:\\develop\\upload\\1a.mp4"));
-        IOUtils.copy(inputStream,outputStream);
+//        GetObjectArgs getObjectArgs = GetObjectArgs
+//                .builder()
+//                .bucket("testbucket")
+//                .object("test/1t.mp4")
+//                .build();
+//
+//        //获取下载文件的文件输入流
+//        FilterInputStream filterInputStream =  minioClient.getObject(getObjectArgs);
+//        //指定输出流
+//        FileOutputStream outputStream = new FileOutputStream("D:\\minIOTest\\upload\\1a.mp4");
+//        //将获取文件的输入流拷贝到指定位置的输出流
+//        IOUtils.copy(filterInputStream,outputStream);
 
-        //校验文件的完整性对文件的内容进行md5
-        FileInputStream fileInputStream1 = new FileInputStream(new File("D:\\develop\\upload\\1.mp4"));
-        String source_md5 = DigestUtils.md5Hex(fileInputStream1);
-        FileInputStream fileInputStream = new FileInputStream(new File("D:\\develop\\upload\\1a.mp4"));
-        String local_md5 = DigestUtils.md5Hex(fileInputStream);
-        if(source_md5.equals(local_md5)){
-            System.out.println("下载成功");
-        }
-
+        //MD5校验文件下载的完整性
+//        String sourceMD5 = DigestUtils.md5Hex(filterInputStream);
+//        String sourceMD5 = "ecc8fdfa9da8d1643f23831217488dff-13";
+        String localMD5 = DigestUtils.md5Hex(new FileInputStream("D:\\minIOTest\\upload\\1a.mp4"));
+        System.out.println(localMD5);
+//
+//        StatObjectArgs statObjectArgs = StatObjectArgs
+//                .builder()
+//                .bucket("testbucket")
+//                .object("test/1t.mp4")
+//                .build();
+//
+//        StatObjectResponse fileStream = minioClient.statObject(statObjectArgs);
+//        String sourceMD5 =fileStream.etag();
+//        System.out.println(sourceMD5);
     }
 
 

@@ -19,15 +19,11 @@ import java.io.IOException;
 
 /**
  * @description 媒资文件管理接口
- * @author Mr.M
- * @date 2022/9/6 11:29
- * @version 1.0
+ * @author hao
  */
  @Api(value = "媒资文件管理接口",tags = "媒资文件管理接口")
  @RestController
 public class MediaFilesController {
-
-
   @Autowired
   MediaFileService mediaFileService;
 

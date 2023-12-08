@@ -10,5 +10,5 @@ public interface TeachplanService {
 
     public void saveTeachplan(SaveTeachplanDto saveTeachplanDto);
 
-    void DeleteTeachplanById(Long courseId);
+    void DeleteTeachplanById(Long teachplanId);
 }
