@@ -3,9 +3,9 @@ package com.hao.media.api;
 import com.hao.base.model.PageParams;
 import com.hao.base.model.PageResult;
 import com.hao.media.model.dto.QueryMediaParamsDto;
-import com.hao.media.model.dto.UploadFileParamsDto;
-import com.hao.media.model.dto.UploadFileResultDto;
+import com.hao.media.model.dto.UploadFileDTO;
 import com.hao.media.model.po.MediaFiles;
+import com.hao.media.model.vo.UploadFileResultVO;
 import com.hao.media.service.MediaFileService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -21,44 +21,51 @@ import java.io.IOException;
  * @description 媒资文件管理接口
  * @author hao
  */
- @Api(value = "媒资文件管理接口",tags = "媒资文件管理接口")
- @RestController
+@Api(value = "媒资文件管理接口",tags = "媒资文件管理接口")
+@RestController
 public class MediaFilesController {
-  @Autowired
-  MediaFileService mediaFileService;
+    @Autowired
+    MediaFileService mediaFileService;
 
+    /**
+     * @description 分页查询媒资接口
+     * @author hao
+     */
+    @ApiOperation("媒资列表查询接口")
+    @PostMapping("/files")
+    public PageResult<MediaFiles> list(PageParams pageParams, @RequestBody QueryMediaParamsDto queryMediaParamsDto){
+        Long companyId = 1232141425L;
 
- @ApiOperation("媒资列表查询接口")
- @PostMapping("/files")
- public PageResult<MediaFiles> list(PageParams pageParams, @RequestBody QueryMediaParamsDto queryMediaParamsDto){
-  Long companyId = 1232141425L;
-  return mediaFileService.queryMediaFiels(companyId,pageParams,queryMediaParamsDto);
+        return mediaFileService.queryMediaFiles(companyId,pageParams,queryMediaParamsDto);
+    }
 
- }
+    /**
+     * @description 将文件信息添加到文件表
+     * @author hao
+     */
+    @ApiOperation("上传图片")
+    @RequestMapping(value = "/upload/coursefile", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public UploadFileResultVO upload(@RequestPart("filedata")MultipartFile filedata) throws IOException {
+        //构建上传的文件信息
+        UploadFileDTO uploadFileDTO = new UploadFileDTO();
 
- @ApiOperation("上传图片")
- @RequestMapping(value = "/upload/coursefile",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-public UploadFileResultDto upload(@RequestPart("filedata")MultipartFile filedata) throws IOException {
+        //文件的原始名称
+        uploadFileDTO.setFilename(filedata.getOriginalFilename());
 
-    //准备上传文件的信息
-     UploadFileParamsDto uploadFileParamsDto = new UploadFileParamsDto();
-     //原始文件名称
-     uploadFileParamsDto.setFilename(filedata.getOriginalFilename());
-     //文件大小
-     uploadFileParamsDto.setFileSize(filedata.getSize());
-     //文件类型
-     uploadFileParamsDto.setFileType("001001");
-     //创建一个临时文件
-     File tempFile = File.createTempFile("minio", ".temp");
-     filedata.transferTo(tempFile);
-     Long companyId = 1232141425L;
-    //文件路径
-     String localFilePath = tempFile.getAbsolutePath();
+        //文件的大小
+        uploadFileDTO.setFileSize(filedata.getSize());
+        //文件类型
+        uploadFileDTO.setFileType("001001");
+        //创建临时文件
+        File tempFile = File.createTempFile("minio",".temp");
+        filedata.transferTo(tempFile);
 
-     //调用service上传图片
-     UploadFileResultDto uploadFileResultDto = mediaFileService.uploadFile(companyId, uploadFileParamsDto, localFilePath);
+        Long companyId = 1232141425L;
 
-     return uploadFileResultDto;
- }
+        //上传文件的本地地址
+        String localFilePath = tempFile.getAbsolutePath();
 
+        UploadFileResultVO uploadFileResultVO = mediaFileService.uploadFile(companyId,uploadFileDTO,localFilePath);
+        return uploadFileResultVO;
+    }
 }

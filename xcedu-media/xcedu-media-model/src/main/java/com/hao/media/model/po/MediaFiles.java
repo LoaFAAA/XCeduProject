@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  * 媒资信息
  * </p>
  *
- * @author itcast
+ * @author hao
  */
 @Data
 @TableName("media_files")
@@ -22,7 +22,7 @@ public class MediaFiles implements Serializable {
     /**
      * 主键
      */
-    @TableId(value = "id", type = IdType.ASSIGN_ID)
+
     private String id;
 
     /**
@@ -80,13 +80,11 @@ public class MediaFiles implements Serializable {
     /**
      * 上传时间
      */
-    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createDate;
 
     /**
      * 修改时间
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime changeDate;
 
     /**

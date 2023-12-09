@@ -3,11 +3,9 @@ package com.hao.media.service;
 import com.hao.base.model.PageParams;
 import com.hao.base.model.PageResult;
 import com.hao.media.model.dto.QueryMediaParamsDto;
-import com.hao.media.model.dto.UploadFileParamsDto;
-import com.hao.media.model.dto.UploadFileResultDto;
+import com.hao.media.model.dto.UploadFileDTO;
 import com.hao.media.model.po.MediaFiles;
-import io.minio.UploadObjectArgs;
-import org.springframework.web.bind.annotation.RequestBody;
+import com.hao.media.model.vo.UploadFileResultVO;
 
 /**
  * @description 媒资文件管理业务类
@@ -25,16 +23,16 @@ public interface MediaFileService {
   * @author Mr.M
   * @date 2022/9/10 8:57
  */
- public PageResult<MediaFiles> queryMediaFiels(Long companyId,PageParams pageParams, QueryMediaParamsDto queryMediaParamsDto);
+ public PageResult<MediaFiles> queryMediaFiles(Long companyId, PageParams pageParams, QueryMediaParamsDto queryMediaParamsDto);
 
  /**
   * 上传文件
   * @param companyId 机构id
-  * @param uploadFileParamsDto 文件信息
+  * @param uploadfileDTO 文件信息
   * @param localFilePath 文件本地路径
   * @return UploadFileResultDto
   */
- public UploadFileResultDto uploadFile(Long companyId, UploadFileParamsDto uploadFileParamsDto, String localFilePath);
+ public UploadFileResultVO uploadFile(Long companyId, UploadFileDTO uploadfileDTO, String localFilePath);
 
- public MediaFiles addMediaFilesToDb(Long companyId,String fileMd5,UploadFileParamsDto uploadFileParamsDto,String bucket,String objectName);
+ public MediaFiles uploadFileToDB(Long companyId,String fileMd5,UploadFileDTO uploadfileDTO,String bucket,String objectName);
 }

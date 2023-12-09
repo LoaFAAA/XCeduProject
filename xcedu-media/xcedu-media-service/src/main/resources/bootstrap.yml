@@ -12,9 +12,6 @@ spring:
         group: xceduProject
         file-extension: yaml
         refresh-enabled: true
-
-
-#profiles默认为dev
   profiles:
     active: xcproject
 
