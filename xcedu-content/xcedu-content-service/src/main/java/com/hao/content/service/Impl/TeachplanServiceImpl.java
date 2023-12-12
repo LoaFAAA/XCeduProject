@@ -2,17 +2,22 @@ package com.hao.content.service.Impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.hao.base.exception.XCException;
+import com.hao.content.mapper.CourseBaseInfoMapper;
 import com.hao.content.mapper.TeachplanMapper;
 import com.hao.content.mapper.TeachplanMediaMapper;
 import com.hao.content.model.dto.SaveTeachplanDto;
 import com.hao.content.model.dto.TeachplanDto;
+import com.hao.content.model.po.CourseBase;
 import com.hao.content.model.po.Teachplan;
+import com.hao.content.model.po.TeachplanMedia;
 import com.hao.content.service.TeachplanService;
+import com.hao.media.model.dto.BindTeachplanMediaDTO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -21,6 +26,8 @@ public class TeachplanServiceImpl implements TeachplanService {
     private TeachplanMapper teachplanMapper;
     @Autowired
     private TeachplanMediaMapper teachplanMediaMapper;
+    @Autowired
+    private CourseBaseInfoMapper courseBaseInfoMapper;
 
     /**
      * 根据id查询课程计划接口
@@ -112,6 +119,40 @@ public class TeachplanServiceImpl implements TeachplanService {
         if (count != 2){
             throw new XCException("删除课程计划的视频失败！");
         }
+    }
+
+    @Transactional
+    public void associationMedia(BindTeachplanMediaDTO bindTeachplanMediaDTO) {
+        //获取courseId
+        Teachplan teachplan = teachplanMapper.selectById(bindTeachplanMediaDTO.getTeachplanId());
+        if ( teachplan == null){
+            throw new XCException("未获得课程计划");
+        }
+        if (!teachplan.getGrade().equals(2)){
+            throw new XCException("课程计划非二级，无法绑定媒资文件");
+        }
+
+        //查询该课程计划是否已存在媒资视频
+        LambdaQueryWrapper<TeachplanMedia> QueryWrapper = new LambdaQueryWrapper<>();
+        QueryWrapper.eq(TeachplanMedia::getTeachplanId,bindTeachplanMediaDTO.getTeachplanId());
+        TeachplanMedia teachplanMedia =teachplanMediaMapper.selectOne(QueryWrapper);
+
+        if (teachplanMedia != null){
+            teachplanMediaMapper.deleteById(teachplanMedia.getId());
+        }
+
+
+        BeanUtils.copyProperties(bindTeachplanMediaDTO,teachplanMedia);
+        teachplanMedia.setCourseId(teachplan.getCourseId());
+        teachplanMedia.setCreateDate(LocalDateTime.now());
+        teachplanMedia.setMediaFilename(bindTeachplanMediaDTO.getFileName());
+
+        //插入数据库
+        Integer count = teachplanMediaMapper.insert(teachplanMedia);
+        if (!count.equals(1)){
+            throw new XCException("未成功绑定课程计划和媒资信息"+teachplanMedia.getMediaFilename());
+        }
+
     }
 
     private int getTeachplanCount(long courseId,long parentId){

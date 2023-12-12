@@ -3,7 +3,9 @@ package com.hao.content.api;
 import com.hao.base.Constant.ErrMessageConstant;
 import com.hao.content.model.dto.SaveTeachplanDto;
 import com.hao.content.model.dto.TeachplanDto;
+import com.hao.content.model.po.TeachplanMedia;
 import com.hao.content.service.TeachplanService;
+import com.hao.media.model.dto.BindTeachplanMediaDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,12 +54,23 @@ public class TeachPlanController {
 
     /**
      * 课程计划查询接口
-     * @param courseId
+     * @param teachplanDto
      * @author hao
      */
     @ApiOperation("课程计划新增或修改接口")
     @PostMapping("/teachplan")
     public void saveTeachplan(@RequestBody SaveTeachplanDto teachplanDto){
         teachplanService.saveTeachplan(teachplanDto);
+    }
+
+    /**
+     * 课程计划查询接口
+     * @param bindTeachplanMediaDTO
+     * @author hao
+     */
+    @ApiOperation("课程计划和媒资信息绑定")
+    @PostMapping("/teachplan/association/media")
+    public void associationMedia(@RequestBody BindTeachplanMediaDTO bindTeachplanMediaDTO){
+        TeachplanMedia teachplanMedia = teachplanService.associationMedia(bindTeachplanMediaDTO);
     }
 }

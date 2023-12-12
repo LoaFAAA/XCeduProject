@@ -6,9 +6,11 @@ import com.hao.base.exception.XCException;
 import com.hao.media.mapper.MediaFileMapper;
 import com.hao.base.model.PageParams;
 import com.hao.base.model.PageResult;
+import com.hao.media.mapper.MediaProcessMapper;
 import com.hao.media.model.dto.QueryMediaParamsDto;
 import com.hao.media.model.dto.UploadFileDTO;
 import com.hao.media.model.po.MediaFiles;
+import com.hao.media.model.po.MediaProcess;
 import com.hao.media.model.vo.UploadFileResultVO;
 import com.hao.media.service.MediaFileService;
 import com.j256.simplemagic.ContentInfo;
@@ -32,6 +34,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * @author Mr.M
@@ -48,6 +51,8 @@ public class MediaFileServiceImpl implements MediaFileService {
     MinioClient minioClient;
     @Autowired
     MediaFileService currentProxy;
+    @Autowired
+    MediaProcessMapper mediaProcessMapper;
 
     //存储普通文件
     @Value("${minIO.bucket.files}")
@@ -101,14 +106,14 @@ public class MediaFileServiceImpl implements MediaFileService {
     }
 
     //获取文件默认存储目录路径 年/月/日
-    private String getDefaultFolderPath() {
+    public String getDefaultFolderPath() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String folder = sdf.format(new Date()).replace("-", "/")+"/";
         return folder;
     }
 
     //获取文件的md5
-    private String getFileMd5(File file) {
+    public String getFileMd5(File file) {
         try (FileInputStream fileInputStream = new FileInputStream(file)) {
             String fileMd5 = DigestUtils.md5Hex(fileInputStream);
             return fileMd5;
@@ -252,6 +257,36 @@ public class MediaFileServiceImpl implements MediaFileService {
             }
             return mediaFiles1;
         }
+
+        //记录待处理的任务
+        //通过判断视频格式并写入待处理任务
+        //向MediaProcess数据表写入
         return mediaFiles;
+    }
+
+    /**
+     * @description 添加待处理的任务
+     * @param mediaFiles  文件信息
+     * @author hao
+     */
+    private void UploadWaitingTaskToDB(MediaFiles mediaFiles){
+        //获取mimeType
+        String fileName = mediaFiles.getFilename();
+        String extension = fileName.substring(fileName.lastIndexOf("."));
+        String mimeType = getFileMimeType(extension);
+
+        //如果视频格式为AVI，写入数据库
+        if (mimeType.equals("video/x-msvideo")){
+            //组装MediaProcess
+            MediaProcess mediaProcess = new MediaProcess();
+            mediaProcess.setFileId(mediaFiles.getFileId());
+            BeanUtils.copyProperties(mediaFiles,mediaProcess);
+            mediaProcess.setStatus("1");
+            mediaProcess.setCreateDate(LocalDateTime.now());
+            mediaProcess.setUrl(null);
+            mediaProcess.setFailCount(0);
+
+            mediaProcessMapper.insert(mediaProcess);
+        }
     }
 }

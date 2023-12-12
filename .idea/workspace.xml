@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab81f890-91a0-4bb7-846c-1aa100763aee" name="Default Changelist" comment="">
+    <list default="true" id="ab81f890-91a0-4bb7-846c-1aa100763aee" name="Default Changelist" comment="实现图片上传，网关设定，媒资系统分页查询">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/TeachPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/TeachPlanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/TeachplanMediaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/TeachplanMediaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/TeachplanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/TeachplanServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/TeachplanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/TeachplanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-api/src/main/java/com/hao/media/api/MediaFilesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-api/src/main/java/com/hao/media/api/MediaFilesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/dto/QueryMediaParamsDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/dto/UploadFileParamsDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/dto/UploadFileResultDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/po/MediaFiles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/po/MediaProcess.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/po/MediaProcessHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/po/MqMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/po/MqMessageHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/dto/QueryMediaParamsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-model/src/main/java/com/hao/media/model/dto/QueryMediaParamsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/MediaFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/MediaFileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/impl/MediaFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/impl/MediaFileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/test/java/com/hao/media/MinioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/test/java/com/hao/media/MinioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +94,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -102,7 +103,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8 (2)" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api-test" />
+    <property name="last_opened_file_path" value="E:/2、黑马程序员Java项目《学成在线》企业级开发实战/学成在线项目—资料/day14 项目优化 项目总结/代码/xuecheng-plus-project" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.1507799" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -110,30 +111,30 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.hao" />
+      <recent name="com.hao.content" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ComXCeduProject\xceduProject\xcedubase\src\main\java\com\hao\base" />
+      <recent name="E:\ComXCeduProject\xceduProject" />
+      <recent name="E:\ComXCeduProject\xceduProject\xcedu-gateway\src\main\resources" />
+      <recent name="E:\ComXCeduProject\xceduProject\xcedu-gateway" />
+      <recent name="E:\ComXCeduProject\xceduProject\xcedu-content\xcedu-content-model\src\main\java\com\hao\content\model\po" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.hao.media.service.jobhandler" />
+      <recent name="com.hao.media.config" />
+      <recent name="com.hao.media.model.dto" />
+      <recent name="com.hao.media.model.vo" />
+      <recent name="com.hao.gateway" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\ComXCeduProject\xceduProject" />
       <recent name="E:\ComXCeduProject\xceduProject\xcedusystem\xcedu-system-service\src\main\resources\com\hao\system\mapper" />
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources\com\hao\content\mapper" />
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\resources\mapper" />
       <recent name="E:\xceduProject\xcedu-content\xcedu-content-service\src\main\java\com\hao\content\mapper" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.hao" />
-      <recent name="com.hao.content" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.hao.media.model.dto" />
-      <recent name="com.hao.media.model.vo" />
-      <recent name="com.hao.gateway" />
-      <recent name="com.hao.content.model.dto" />
-      <recent name="com.hao.content.model.po" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ComXCeduProject\xceduProject" />
-      <recent name="E:\ComXCeduProject\xceduProject\xcedu-gateway\src\main\resources" />
-      <recent name="E:\ComXCeduProject\xceduProject\xcedu-gateway" />
-      <recent name="E:\ComXCeduProject\xceduProject\xcedu-content\xcedu-content-model\src\main\java\com\hao\content\model\po" />
-      <recent name="E:\ComXCeduProject\xceduProject\xcedu-content\xcedu-content-model\src\main\java\com\hao\content\model\dto" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -166,9 +167,22 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.xc-media-api#1">
-    <configuration name="xc-media-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/api-test/xc-media-api.http" runType="Run single request">
-      <method v="2" />
+  <component name="RunManager" selected="Spring Boot.MediaApplication2">
+    <configuration name="MinioTest.TestFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xcedu-media-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hao.media.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hao.media" />
+      <option name="MAIN_CLASS_NAME" value="com.hao.media.MinioTest" />
+      <option name="METHOD_NAME" value="TestFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="ContentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="xcedu-content-api" />
@@ -205,6 +219,16 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hao.MediaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MediaApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xcedu-media-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hao.MediaApplication" />
+      <option name="VM_PARAMETERS" value="-Dserver.port=63051 -Dxxl.job.executor.port=9998" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,13 +246,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.MinioTest.TestFile" />
+      <item itemvalue="Spring Boot.MediaApplication2" />
+      <item itemvalue="Spring Boot.ContentApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.MediaApplication" />
+      <item itemvalue="Spring Boot.SystemApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.MediaApplication" />
-        <item itemvalue="Spring Boot.SystemApplication" />
-        <item itemvalue="Spring Boot.ContentApplication" />
-        <item itemvalue="HTTP Request.xc-media-api#1" />
         <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.MediaApplication" />
+        <item itemvalue="Spring Boot.ContentApplication" />
+        <item itemvalue="JUnit.MinioTest.TestFile" />
+        <item itemvalue="Spring Boot.SystemApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +278,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -300,7 +332,12 @@
       <workItem from="1701941829737" duration="1677000" />
       <workItem from="1701943520091" duration="15213000" />
       <workItem from="1702028699490" duration="18317000" />
-      <workItem from="1702118072950" duration="23837000" />
+      <workItem from="1702118072950" duration="24128000" />
+      <workItem from="1702222011468" duration="4652000" />
+      <workItem from="1702293132364" duration="7699000" />
+      <workItem from="1702318295252" duration="424000" />
+      <workItem from="1702318880443" duration="2440000" />
+      <workItem from="1702378039853" duration="10559000" />
     </task>
     <task id="LOCAL-00001" summary="项目第一次提交">
       <created>1700738086042</created>
@@ -393,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702069157509</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="实现图片上传，网关设定，媒资系统分页查询">
+      <created>1702155074196</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702155074196</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +454,8 @@
     <MESSAGE value="重构课程添加中课程信息和课程营销信息代码&#10;自定义异常处理器&#10;常量的设定" />
     <MESSAGE value="课程计划相关接口开发（TO DO）&#10;自定义异常处理器异常处理" />
     <MESSAGE value="MinIO分布式文件接口使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="MinIO分布式文件接口使用" />
+    <MESSAGE value="实现图片上传，网关设定，媒资系统分页查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现图片上传，网关设定，媒资系统分页查询" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1445" y="279" key="#Inspections" timestamp="1701015344996">
@@ -429,14 +474,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1495" y="276" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1700741958656" />
-    <state x="1094" y="271" width="1111" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1701103658171">
+    <state x="1449" y="275" width="1111" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1702320947641">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1094" y="271" width="1111" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1701103658171" />
-    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser" timestamp="1702152700515">
+    <state x="1449" y="275" width="1111" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1702320947641" />
+    <state x="1750" y="323" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1702320746062">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1702152700515" />
+    <state x="1750" y="323" key="#com.intellij.ide.macro.MacrosDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1702320746062" />
+    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser" timestamp="1702403801223">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1702403801223" />
     <state x="1374" y="606" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1701940855735">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -449,70 +498,70 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1606" y="389" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1702118593921" />
-    <state x="1353" y="116" key="CommitChangelistDialog2" timestamp="1702069156365">
+    <state x="1353" y="116" key="CommitChangelistDialog2" timestamp="1702155073262">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1353" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1702069156365" />
+    <state x="1353" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1702155073262" />
     <state x="496" y="127" key="DiffContextDialog" timestamp="1700748994957">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="496" y="127" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700748994957" />
-    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1702142379824">
+    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1702403396507">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1702142379824" />
+    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1702403396507" />
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog" timestamp="1700738755899">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700738755899" />
-    <state width="860" height="342" key="GridCell.Tab.0.bottom" timestamp="1702155008703">
+    <state width="1203" height="354" key="GridCell.Tab.0.bottom" timestamp="1702403507454">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1702155008703" />
-    <state width="860" height="342" key="GridCell.Tab.0.center" timestamp="1702155008703">
+    <state width="1203" height="354" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1702403507454" />
+    <state width="1203" height="354" key="GridCell.Tab.0.center" timestamp="1702403507454">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1702155008703" />
-    <state width="860" height="342" key="GridCell.Tab.0.left" timestamp="1702155008703">
+    <state width="1203" height="354" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1702403507454" />
+    <state width="1203" height="354" key="GridCell.Tab.0.left" timestamp="1702403507454">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1702155008703" />
-    <state width="860" height="342" key="GridCell.Tab.0.right" timestamp="1702155008703">
+    <state width="1203" height="354" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1702403507454" />
+    <state width="1203" height="354" key="GridCell.Tab.0.right" timestamp="1702403507454">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1702155008703" />
-    <state width="860" height="342" key="GridCell.Tab.1.bottom" timestamp="1702155008703">
+    <state width="1203" height="354" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1702403507454" />
+    <state width="914" height="340" key="GridCell.Tab.1.bottom" timestamp="1702321322731">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1702155008703" />
-    <state width="860" height="342" key="GridCell.Tab.1.center" timestamp="1702155008703">
+    <state width="914" height="340" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1702321322731" />
+    <state width="914" height="340" key="GridCell.Tab.1.center" timestamp="1702321322731">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1702155008703" />
-    <state width="860" height="342" key="GridCell.Tab.1.left" timestamp="1702155008703">
+    <state width="914" height="340" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1702321322731" />
+    <state width="914" height="340" key="GridCell.Tab.1.left" timestamp="1702321322730">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1702155008703" />
-    <state width="860" height="342" key="GridCell.Tab.1.right" timestamp="1702155008703">
+    <state width="914" height="340" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1702321322730" />
+    <state width="914" height="340" key="GridCell.Tab.1.right" timestamp="1702321322731">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1702155008703" />
-    <state width="860" height="342" key="GridCell.Tab.2.bottom" timestamp="1702155005158">
+    <state width="914" height="340" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1702321322731" />
+    <state width="914" height="340" key="GridCell.Tab.2.bottom" timestamp="1702321322728">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1702155005158" />
-    <state width="860" height="342" key="GridCell.Tab.2.center" timestamp="1702155005158">
+    <state width="914" height="340" key="GridCell.Tab.2.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1702321322728" />
+    <state width="914" height="340" key="GridCell.Tab.2.center" timestamp="1702321322728">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1702155005158" />
-    <state width="860" height="342" key="GridCell.Tab.2.left" timestamp="1702155005158">
+    <state width="914" height="340" key="GridCell.Tab.2.center/0.0.2560.1400@0.0.2560.1400" timestamp="1702321322728" />
+    <state width="914" height="340" key="GridCell.Tab.2.left" timestamp="1702321322728">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1702155005158" />
-    <state width="860" height="342" key="GridCell.Tab.2.right" timestamp="1702155005158">
+    <state width="914" height="340" key="GridCell.Tab.2.left/0.0.2560.1400@0.0.2560.1400" timestamp="1702321322728" />
+    <state width="914" height="340" key="GridCell.Tab.2.right" timestamp="1702321322728">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="860" height="342" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1702155005158" />
+    <state width="914" height="340" key="GridCell.Tab.2.right/0.0.2560.1400@0.0.2560.1400" timestamp="1702321322728" />
     <state x="1321" y="273" key="Maven.ArtifactSearchDialog" timestamp="1700838282450">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -525,10 +574,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="765" y="334" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1702142401718" />
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1702069162860">
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1702155078173">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1702069162860" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1702155078173" />
     <state x="1539" y="100" width="929" height="1200" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1700737684274">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -549,10 +598,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1378" y="245" width="1091" height="966" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1702142284277" />
-    <state x="1476" y="329" width="840" height="1034" key="run.anything.popup" timestamp="1700834248775">
+    <state x="1476" y="329" width="840" height="1034" key="run.anything.popup" timestamp="1702305629638">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1476" y="329" width="840" height="1034" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1700834248775" />
+    <state x="1476" y="329" width="840" height="1034" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1702305629638" />
     <state x="1239" y="179" width="838" height="1032" key="search.everywhere.popup" timestamp="1701942266614">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -575,21 +624,6 @@
           <url>file://$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java</url>
           <line>145</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/xcedu-media/xcedu-media-api/src/main/java/com/hao/media/api/MediaFilesController.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/impl/MediaFileServiceImpl.java</url>
-          <line>170</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/impl/MediaFileServiceImpl.java</url>
-          <line>137</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

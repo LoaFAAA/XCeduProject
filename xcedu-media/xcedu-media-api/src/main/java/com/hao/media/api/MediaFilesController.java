@@ -2,6 +2,7 @@ package com.hao.media.api;
 
 import com.hao.base.model.PageParams;
 import com.hao.base.model.PageResult;
+import com.hao.base.model.RestResponse;
 import com.hao.media.model.dto.QueryMediaParamsDto;
 import com.hao.media.model.dto.UploadFileDTO;
 import com.hao.media.model.po.MediaFiles;
@@ -68,4 +69,5 @@ public class MediaFilesController {
         UploadFileResultVO uploadFileResultVO = mediaFileService.uploadFile(companyId,uploadFileDTO,localFilePath);
         return uploadFileResultVO;
     }
+
 }

@@ -4,16 +4,16 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 /**
- * @author Mr.M
+ * @author hao
  * @version 1.0
  * @description 媒资文件查询请求模型类
- * @date 2022/9/10 8:53
  */
 @Data
 @ToString
-public class QueryMediaParamsDto {
-
+public class QueryMediaParamsDto implements Serializable {
     @ApiModelProperty("媒资文件名称")
     private String filename;
     @ApiModelProperty("媒资类型")

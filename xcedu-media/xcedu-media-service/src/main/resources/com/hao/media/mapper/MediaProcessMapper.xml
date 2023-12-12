@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hao.media.mapper.MediaProcessMapper">
+
+    <select id="selectListByShardIndex" resultType="com.hao.media.model.po.MediaProcess">
+        select * from media_process as mp
+        <where>
+            <if test="ShardTotal != null and ShardIndex != null">
+                mp.id % #{ShardTotal} = #{ShardIndex}
+            </if>
+            and (mp.status = 1 or mp.status = 3)
+        </where>
+        limit #{count}
+    </select>
+
+</mapper>

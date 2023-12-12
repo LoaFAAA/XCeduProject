@@ -1,5 +1,7 @@
 package com.hao.media;
 
+import com.hao.media.service.LargeFileService;
+import com.hao.media.service.impl.LargeFileServiceImpl;
 import com.j256.simplemagic.ContentInfo;
 import com.j256.simplemagic.ContentInfoUtil;
 import io.minio.*;
@@ -8,6 +10,7 @@ import io.minio.messages.Item;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 
 import java.io.*;
@@ -19,6 +22,8 @@ import java.io.*;
  * @date 2023/2/17 11:55
  */
 public class MinioTest {
+    @Autowired
+    private LargeFileService largeFileService;
 
     static MinioClient minioClient =
             MinioClient.builder()
@@ -101,7 +106,12 @@ public class MinioTest {
 //        System.out.println(sourceMD5);
     }
 
-
+    @Test
+    public void TestFile(){
+        LargeFileServiceImpl largeFileServiceI = new LargeFileServiceImpl();
+        String result = largeFileServiceI.getChunkFileFolderPath("2023/12/10/015cc61684edb39b5ce48da133f160b7.jpg");
+        System.out.println(result);
+    }
 
 
 
