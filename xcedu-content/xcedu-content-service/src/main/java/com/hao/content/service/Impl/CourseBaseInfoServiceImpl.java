@@ -1,6 +1,7 @@
 package com.hao.content.service.Impl;
 
 //import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.fasterxml.jackson.databind.util.BeanUtil;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -11,14 +12,11 @@ import com.hao.base.model.PageParams;
 import com.hao.base.model.PageResult;
 import com.hao.content.mapper.CourseCategoryMapper;
 import com.hao.content.mapper.CourseMarketMapper;
-import com.hao.content.model.dto.AddCourseDto;
-import com.hao.content.model.dto.CourseBaseInfoDto;
-import com.hao.content.model.dto.EditCourseDto;
-import com.hao.content.model.dto.QueryCourseParamsDTO;
-import com.hao.content.model.po.CourseBase;
+import com.hao.content.mapper.TeacherMapper;
+import com.hao.content.model.dto.*;
+import com.hao.content.model.po.*;
 import com.hao.content.mapper.CourseBaseInfoMapper;
-import com.hao.content.model.po.CourseCategory;
-import com.hao.content.model.po.CourseMarket;
+import com.hao.content.model.vo.TeacherVO;
 import com.hao.content.service.CourseBaseInfoService;
 import com.hao.content.service.CourseMarketService;
 import lombok.extern.slf4j.Slf4j;
@@ -42,6 +40,8 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
     private CourseCategoryMapper courseCategoryMapper;
     @Autowired
     private CourseMarketService courseMarketService;
+    @Autowired
+    private TeacherMapper teacherMedia;
 
     /**
      * 课程分页查询接口
@@ -144,13 +144,13 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         CourseBaseInfoDto courseBaseInfoDto = new CourseBaseInfoDto();
         courseBase = courseBaseInfoMapper.selectById(courseId);
         if (courseBase == null){
-            throw new XCException("查询结果为空");
+            throw new XCException("查询课程信息结果为空");
         }
         BeanUtils.copyProperties(courseBase,courseBaseInfoDto);
 
         CourseMarket courseMarket = courseMarketMapper.selectById(courseId);
         if (courseMarket == null){
-            throw new RuntimeException("查询结果为空");
+            throw new RuntimeException("查询课程营销结果为空");
         }
         BeanUtils.copyProperties(courseMarket,courseBaseInfoDto);
 
@@ -204,6 +204,72 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         CourseBaseInfoDto courseBaseInfoDto = this.getCourseBaseById(courseId);
 
         return courseBaseInfoDto;
+    }
+
+
+    public Teacher GetTeacherByCourseId(Long courseId) {
+        LambdaQueryWrapper<Teacher> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Teacher::getCourseId,courseId);
+        Teacher teacher = teacherMedia.selectOne(queryWrapper);
+
+        if (teacher == null){
+            throw new XCException("未成功查询到课程教师");
+        }
+
+        return teacher;
+    }
+
+    @Override
+    public TeacherVO saveTeacher(TeacherDTO teacherDTO) {
+        Teacher teacher = new Teacher();
+        //判断是新增还是修改
+        if (teacherDTO.getId() != null){
+            teacher = teacherMedia.selectById(teacherDTO.getId());
+
+            if (teacher == null){
+                throw new XCException("未查询到所要修改的教师信息");
+            }
+            BeanUtils.copyProperties(teacherDTO,teacher);
+
+            int count = teacherMedia.updateById(teacher);
+            if (count != 1){
+                throw new XCException("未成功修改教师信息");
+            }
+        }else {
+            BeanUtils.copyProperties(teacher,teacherDTO);
+            teacher.setCreateDate(LocalDateTime.now());
+            int count1 = teacherMedia.insert(teacher);
+            if (count1 != 1){
+                throw new XCException("未成功新增教师信息");
+            }
+        }
+
+        //组装返回教师信息
+        TeacherVO teacherVO = new TeacherVO();
+        teacherVO.setId(teacher.getId());
+        BeanUtils.copyProperties(teacher,teacherVO);
+
+        return teacherVO;
+    }
+
+    @Override
+    public void DeleteTeacherByid(Long courseId, Long id) {
+        if (courseId == null){
+            throw new XCException("所要删除的教师信息的课程id为空");
+        }
+        if (id == null){
+            throw new XCException("所要删除的教师信息的教师id为空");
+        }
+
+        LambdaQueryWrapper<Teacher> queryWrapper = new LambdaQueryWrapper();
+        queryWrapper.eq(Teacher::getCourseId,courseId);
+        queryWrapper.eq(Teacher::getId,id);
+
+        int count = teacherMedia.delete(queryWrapper);
+
+        if (count != 1){
+            throw new XCException("未成功删除课程教师其课程id为: "+courseId+" 教师id为 "+id);
+        }
     }
 
 
