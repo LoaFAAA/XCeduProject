@@ -21,6 +21,9 @@ spring:
       - data-id: swagger-${spring.profiles.active}.yaml
         group: xceducommon
         refresh: true
+      - data-id: freemarker-config-xcproject.yaml
+        group: xceducommon
+        refresh: true
   profiles:
     active: xcproject
 #  datasource:
