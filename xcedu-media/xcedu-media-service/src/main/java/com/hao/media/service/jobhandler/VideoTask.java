@@ -42,7 +42,7 @@ public class VideoTask {
     MediaProcessService mediaProcessService;
     @Autowired
     MediaFileService mediaFileService;
-    @Value("${videoprocess.ffmpeg}")
+    @Value("E:\\ComXCeduProject\\RequiredComponent\\ffmpeg\\ffmpeg.exe")
     String ffmpegPath;
 
     /**

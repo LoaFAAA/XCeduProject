@@ -128,8 +128,8 @@ public class CourseBaseInfoServiceImpl implements CourseBaseInfoService {
         BeanUtils.copyProperties(RcourseMarket,courseBaseInfoDto);
 
         //查询分类名称
-        courseBaseInfoDto.setMtName(courseCategoryMapper.SelectByCourseId(courseBase.getMt()));
-        courseBaseInfoDto.setStName(courseCategoryMapper.SelectByCourseId(courseBase.getSt()));
+        courseBaseInfoDto.setMtName(courseCategoryMapper.SelectByCategoryId(courseBase.getMt()));
+        courseBaseInfoDto.setStName(courseCategoryMapper.SelectByCategoryId(courseBase.getSt()));
 
         return courseBaseInfoDto;
     }

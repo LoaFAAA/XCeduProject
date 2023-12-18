@@ -8,7 +8,6 @@ import lombok.ToString;
 import java.util.List;
 
 @Data
-@ToString(callSuper = true)
 public class TeachplanDto extends Teachplan {
     //与媒资管理的信息
     private TeachplanMedia teachplanMedia;

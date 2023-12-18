@@ -1,27 +1,20 @@
 package com.hao.content.model.po;
 
-
 import com.baomidou.mybatisplus.annotation.*;
-import lombok.*;
+import com.hao.content.model.dto.CourseBaseInfoDto;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/**
- * 课程基本信息
- *
- * @author hao
- */
 @Data
-@TableName("course_base")
-public class CourseBase implements Serializable {
-
+@TableName("course_publish_pre")
+public class CoursePublishPre implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
      * 主键
      */
-    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -55,9 +48,19 @@ public class CourseBase implements Serializable {
     private String mt;
 
     /**
+     * 大分类名称
+     */
+    private String mtName;
+
+    /**
      * 小分类
      */
     private String st;
+
+    /**
+     * 小分类名称
+     */
+    private String stName;
 
     /**
      * 课程等级
@@ -78,38 +81,49 @@ public class CourseBase implements Serializable {
      * 课程图片
      */
     private String pic;
+    //课程营销信息的Json格式数据
+    private String market;
+
+    //课程计划的Json格式数据
+    private String teachplan;
+
+    //课程相关老师的Json格式数据
+    private String teachers;
 
     /**
-     * 创建时间
+     * 提交时间
      */
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createDate;
 
     /**
-     * 修改时间
+     * 审核时间
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime changeDate;
-
-    /**
-     * 创建人
-     */
-    private String createPeople;
-
-    /**
-     * 更新人
-     */
-    private String changePeople;
-
-    /**
-     * 审核状态
-     */
-    private String auditStatus;
+    private LocalDateTime auditDate;
 
     /**
      * 课程发布状态 未发布  已发布 下线
      */
     private String status;
 
+    /**
+     * 收费规则，对应数据字典
+     */
+    private String charge;
 
+    /**
+     * 现价
+     */
+    private Float price;
+
+    /**
+     * 原价
+     */
+    private Float originalPrice;
+
+    /**
+     * 有效期天数
+     */
+    private Integer validDays;
 }

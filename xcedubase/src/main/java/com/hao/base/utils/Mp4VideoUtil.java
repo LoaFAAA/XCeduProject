@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Mp4VideoUtil extends VideoUtil {
 
-    String ffmpeg_path = "D:\\Program Files\\ffmpeg-20180227-fa0c9d6-win64-static\\bin\\ffmpeg.exe";//ffmpeg的安装位置
+    String ffmpeg_path = "E:\\ComXCeduProject\\RequiredComponent\\ffmpeg\\ffmpeg.exe";//ffmpeg的安装位置
     String video_path = "D:\\BaiduNetdiskDownload\\test1.avi";
     String mp4_name = "test1.mp4";
     String mp4folder_path = "D:/BaiduNetdiskDownload/Movies/test1/";

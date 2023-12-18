@@ -63,6 +63,8 @@ public class TeachplanServiceImpl implements TeachplanService {
             Teachplan teachplan = new Teachplan();
             BeanUtils.copyProperties(saveTeachplanDto,teachplan);
             teachplan.setOrderby(count + 1);
+            teachplan.setStatus(1);
+            teachplan.setIsPreview("0");
             teachplanMapper.insert(teachplan);
         }else {
             Teachplan teachplan1 = teachplanMapper.selectById(saveTeachplanDto.getId());

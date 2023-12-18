@@ -9,7 +9,6 @@ import lombok.ToString;
  * @author hao
  */
 @Data
-@ToString(callSuper = true)
 public class CourseBaseInfoDto extends CourseBase {
 
 
