@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/xcedusystem/pom.xml" />
         <option value="$PROJECT_DIR$/xcedu-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/xcedu-media/pom.xml" />
+        <option value="$PROJECT_DIR$/xceduMessagesSDK/pom.xml" />
+        <option value="$PROJECT_DIR$/xceduMessageSDK/pom.xml" />
       </list>
     </option>
   </component>

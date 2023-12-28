@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab81f890-91a0-4bb7-846c-1aa100763aee" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto/CourseBaseInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto/CourseBaseInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto/TeachplanDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/dto/TeachplanDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CoursePublishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/java/com/hao/content/api/CoursePublishController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-api/src/main/resources/templates/course_template.ftl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/po/CourseBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-model/src/main/java/com/hao/content/model/po/CourseBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/CourseCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/mapper/CourseCategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CourseBaseInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/TeachplanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/TeachplanServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/com/hao/content/mapper/CourseCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/com/hao/content/mapper/CourseCategoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/com/hao/content/mapper/TeachplanMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/resources/com/hao/content/mapper/TeachplanMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/jobhandler/VideoTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/jobhandler/VideoTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/Constant/CourseModeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/Constant/CourseModeStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/Constant/ErrMessageConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/Constant/ErrMessageConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/utils/Mp4VideoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/utils/Mp4VideoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/utils/VideoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/utils/VideoUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CoursePublishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CoursePublishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/impl/MediaFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/xcedu-media/xcedu-media-service/src/main/java/com/hao/media/service/impl/MediaFileServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -94,6 +89,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -258,8 +254,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ContentApplication" />
-        <item itemvalue="Spring Boot.MediaApplication" />
         <item itemvalue="Spring Boot.SystemApplication" />
+        <item itemvalue="Spring Boot.MediaApplication" />
         <item itemvalue="Spring Boot.GatewayApplication" />
         <item itemvalue="JUnit.MinioTest.TestFile" />
       </list>
@@ -347,7 +343,13 @@
       <workItem from="1702487708607" duration="5239000" />
       <workItem from="1702548904196" duration="2449000" />
       <workItem from="1702825156883" duration="12010000" />
-      <workItem from="1702892703910" duration="14513000" />
+      <workItem from="1702892703910" duration="14550000" />
+      <workItem from="1702997400708" duration="1793000" />
+      <workItem from="1703260980455" duration="427000" />
+      <workItem from="1703329394634" duration="1065000" />
+      <workItem from="1703407833858" duration="637000" />
+      <workItem from="1703768899097" duration="7900000" />
+      <workItem from="1703786042520" duration="2930000" />
     </task>
     <task id="LOCAL-00001" summary="项目第一次提交">
       <created>1700738086042</created>
@@ -468,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702582737588</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="课程审核及发布接口">
+      <created>1702916592338</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702916592338</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +498,8 @@
     <MESSAGE value="媒资系统上传，下载，合并等功能模块实现" />
     <MESSAGE value="教师信息增删改查" />
     <MESSAGE value="Freemarke尝试" />
-    <option name="LAST_COMMIT_MESSAGE" value="Freemarke尝试" />
+    <MESSAGE value="课程审核及发布接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程审核及发布接口" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1445" y="279" key="#Inspections" timestamp="1701015344996">
@@ -516,10 +526,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1750" y="323" key="#com.intellij.ide.macro.MacrosDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1702320746062" />
-    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser" timestamp="1702913398795">
+    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser" timestamp="1703788015533">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1702913398795" />
+    <state x="1665" y="339" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1703788015533" />
     <state x="1374" y="606" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1701940855735">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -532,54 +542,54 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1606" y="389" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1702490250929" />
-    <state x="1353" y="116" key="CommitChangelistDialog2" timestamp="1702582736826">
+    <state x="1353" y="116" key="CommitChangelistDialog2" timestamp="1702916591268">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1353" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1702582736826" />
+    <state x="1353" y="116" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1702916591268" />
     <state x="496" y="127" key="DiffContextDialog" timestamp="1700748994957">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="496" y="127" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700748994957" />
-    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1702825164224">
+    <state x="1733" y="382" key="FileChooserDialogImpl" timestamp="1703785676682">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1702825164224" />
+    <state x="1733" y="382" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1703785676682" />
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog" timestamp="1700738755899">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1845" y="569" width="323" height="262" key="Github.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700738755899" />
-    <state width="922" height="337" key="GridCell.Tab.0.bottom" timestamp="1702915697041">
+    <state width="796" height="337" key="GridCell.Tab.0.bottom" timestamp="1703787636524">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="922" height="337" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1702915697041" />
-    <state width="922" height="337" key="GridCell.Tab.0.center" timestamp="1702915697041">
+    <state width="796" height="337" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1703787636524" />
+    <state width="796" height="337" key="GridCell.Tab.0.center" timestamp="1703787636524">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="922" height="337" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1702915697041" />
-    <state width="922" height="337" key="GridCell.Tab.0.left" timestamp="1702915697041">
+    <state width="796" height="337" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1703787636524" />
+    <state width="796" height="337" key="GridCell.Tab.0.left" timestamp="1703787636524">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="922" height="337" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1702915697041" />
-    <state width="922" height="337" key="GridCell.Tab.0.right" timestamp="1702915697041">
+    <state width="796" height="337" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1703787636524" />
+    <state width="796" height="337" key="GridCell.Tab.0.right" timestamp="1703787636524">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="922" height="337" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1702915697041" />
-    <state width="922" height="337" key="GridCell.Tab.1.bottom" timestamp="1702915697041">
+    <state width="796" height="337" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1703787636524" />
+    <state width="796" height="337" key="GridCell.Tab.1.bottom" timestamp="1703787636525">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="922" height="337" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1702915697041" />
-    <state width="922" height="337" key="GridCell.Tab.1.center" timestamp="1702915697041">
+    <state width="796" height="337" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1703787636525" />
+    <state width="796" height="337" key="GridCell.Tab.1.center" timestamp="1703787636525">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="922" height="337" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1702915697041" />
-    <state width="922" height="337" key="GridCell.Tab.1.left" timestamp="1702915697041">
+    <state width="796" height="337" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1703787636525" />
+    <state width="796" height="337" key="GridCell.Tab.1.left" timestamp="1703787636525">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="922" height="337" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1702915697041" />
-    <state width="922" height="337" key="GridCell.Tab.1.right" timestamp="1702915697041">
+    <state width="796" height="337" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1703787636525" />
+    <state width="796" height="337" key="GridCell.Tab.1.right" timestamp="1703787636525">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="922" height="337" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1702915697041" />
+    <state width="796" height="337" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1703787636525" />
     <state width="922" height="337" key="GridCell.Tab.2.bottom" timestamp="1702915606292">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -600,18 +610,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1321" y="273" key="Maven.ArtifactSearchDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700838282450" />
-    <state x="1027" y="269" width="1422" height="933" key="NewModule_or_Project.wizard" timestamp="1702142384440">
+    <state x="1027" y="269" width="1422" height="933" key="NewModule_or_Project.wizard" timestamp="1703785287979">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1027" y="269" width="1422" height="933" key="NewModule_or_Project.wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1702142384439" />
-    <state x="765" y="334" key="SettingsEditor" timestamp="1702142401718">
+    <state x="1027" y="269" width="1422" height="933" key="NewModule_or_Project.wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1703785287979" />
+    <state x="810" y="276" key="SettingsEditor" timestamp="1703785935671">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="765" y="334" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1702142401718" />
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1702582740272">
+    <state x="810" y="276" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1703785935671" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2" timestamp="1702916594330">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1702582740272" />
+    <state x="1495" y="363" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1702916594330" />
     <state x="1539" y="100" width="929" height="1200" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1700737684274">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -628,10 +638,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1612" y="429" key="git4idea.merge.GitPullDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1700739004303" />
-    <state x="1378" y="245" width="1091" height="966" key="new project wizard" timestamp="1702142284277">
+    <state x="1378" y="245" width="1091" height="966" key="new project wizard" timestamp="1703785310861">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1378" y="245" width="1091" height="966" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1702142284277" />
+    <state x="1378" y="245" width="1091" height="966" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1703785310861" />
     <state x="1476" y="329" width="840" height="1034" key="run.anything.popup" timestamp="1702305629638">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -653,11 +663,6 @@
           <url>file://$PROJECT_DIR$/xcedubase/src/main/java/com/hao/base/handler/GlobalExceptionHandler.java</url>
           <line>16</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/xcedu-content/xcedu-content-service/src/main/java/com/hao/content/service/Impl/CoursePublishServiceImpl.java</url>
-          <line>167</line>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

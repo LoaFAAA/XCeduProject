@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/xcedusystem/xcedu-system-api/xcedu-system-api.iml" filepath="$PROJECT_DIR$/xcedusystem/xcedu-system-api/xcedu-system-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedusystem/xcedu-system-model/xcedu-system-model.iml" filepath="$PROJECT_DIR$/xcedusystem/xcedu-system-model/xcedu-system-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedusystem/xcedu-system-service/xcedu-system-service.iml" filepath="$PROJECT_DIR$/xcedusystem/xcedu-system-service/xcedu-system-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xceduMessageSDK/xceduMessageSDK.iml" filepath="$PROJECT_DIR$/xceduMessageSDK/xceduMessageSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/xceduProject.iml" filepath="$PROJECT_DIR$/xceduProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/xcedubase/xcedubase.iml" filepath="$PROJECT_DIR$/xcedubase/xcedubase.iml" />
       <module fileurl="file://$PROJECT_DIR$/xceduparent/xceduparent.iml" filepath="$PROJECT_DIR$/xceduparent/xceduparent.iml" />

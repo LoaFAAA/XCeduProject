@@ -12,6 +12,8 @@ import com.hao.content.model.po.*;
 import com.hao.content.model.vo.CoursePreviewVO;
 import com.hao.content.service.CoursePublishService;
 import com.hao.content.service.TeachplanService;
+import com.hao.messagesdk.model.po.MqMessage;
+import com.hao.messagesdk.service.MqMessageService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -40,6 +42,8 @@ public class CoursePublishServiceImpl implements CoursePublishService {
     private TeachplanMapper teachplanMapper;
     @Autowired
     private TeachplanService teachplanService;
+    @Autowired
+    private MqMessageService mqMessageService;
 
     /**
      * 根据id获取课程预览信息
@@ -165,6 +169,7 @@ public class CoursePublishServiceImpl implements CoursePublishService {
      */
     @Transactional
     public void coursePublish(Long companyId, Long courseId) {
+        //查询预发布表
         CoursePublishPre coursePublishPre = coursePublishPreMapper.selectById(courseId);
 
         if (coursePublishPre == null && coursePublishPre.getCompanyId().equals(companyId)){
@@ -197,10 +202,26 @@ public class CoursePublishServiceImpl implements CoursePublishService {
             throw new XCException("课程未成功修改为已发布");
         }
 
+        //写入消息表
+        saveCoursePublishMessage(courseId);
+
         //删除预发布表内容
         count += coursePublishPreMapper.deleteById(courseId);
         if (count != 3){
             throw new XCException("未成功删除预发布表内容");
         }
+    }
+
+    /**
+     * 将课程表信息写入消息表
+     * @param courseId
+     * @author hao
+     */
+    private void saveCoursePublishMessage(Long courseId){
+        MqMessage mqMessage = mqMessageService.addMessage("course_publish",String.valueOf(courseId),null,null);
+        if (mqMessage == null){
+            throw new XCException("未知错误");
+        }
+
     }
 }
